@@ -33,6 +33,7 @@ def data_csv():
             casts = subject['casts']
             actor = ''
             alt = subject['alt']
+            #循环获取演员
             for cast in casts:
                 actor += cast['name'] + ', '
             row = (id, name, star, actor, alt)
