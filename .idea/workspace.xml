@@ -2,34 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e6d5563-e490-4eba-84d6-741086ff0354" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/wordcloud.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie.csv" beforeDir="false" afterPath="$PROJECT_DIR$/movie.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/1291549.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/1291549.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/1291552.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/1291552.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/1291560.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/1291560.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/1291841.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/1291841.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/1292052.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/1292052.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/1292063.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/1292063.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/1292064.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/1292064.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/1292213.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/1292213.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/1292365.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/1292365.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/1292722.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/1292722.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/1293182.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/1293182.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/1293839.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/1293839.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/1295124.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/1295124.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/1308807.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/1308807.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/1851857.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/1851857.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/1889243.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/1889243.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/1929463.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/1929463.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/2131459.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/2131459.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/26387939.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/26387939.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/3011091.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/3011091.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/3319755.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/3319755.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/3541415.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/3541415.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/3793023.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/3793023.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/5912992.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/5912992.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_image/6786002.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/movie_image/6786002.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/which_movie.py" beforeDir="false" afterPath="$PROJECT_DIR$/which_movie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/render.html" beforeDir="false" afterPath="$PROJECT_DIR$/render.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +30,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/piechart.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wordcloud.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -70,7 +45,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.movie">
+  <component name="RunManager" selected="Python.wordcloudrun">
     <configuration name="lianjiarun" type="PythonConfigurationType" factoryName="Python">
       <module name="crossin_crawler" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -181,6 +156,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="wordcloudrun" type="PythonConfigurationType" factoryName="Python">
+      <module name="crossin_crawler" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="E:\anaconda\setup\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wordcloud.py" />
+      <option name="PARAMETERS" value="run" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="zhaopinrun" type="PythonConfigurationType" factoryName="Python">
       <module name="crossin_crawler" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -228,6 +225,7 @@
     <list>
       <item itemvalue="Python.weather1" />
       <item itemvalue="Python.movie" />
+      <item itemvalue="Python.wordcloudrun" />
       <item itemvalue="Python.sinarun" />
       <item itemvalue="Python.zhihurun" />
       <item itemvalue="Python.zhaopinrun" />
@@ -259,7 +257,7 @@
       <workItem from="1567043490265" duration="6630000" />
       <workItem from="1567084408984" duration="5751000" />
       <workItem from="1567211961538" duration="5640000" />
-      <workItem from="1567249530196" duration="890000" />
+      <workItem from="1567249530196" duration="2390000" />
     </task>
     <servers />
   </component>
@@ -298,8 +296,9 @@
     <SUITE FILE_PATH="coverage/crossin_crawler$weather1.coverage" NAME="weather1 Coverage Results" MODIFIED="1566640651317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/crossin_crawler$zhaopinrun.coverage" NAME="zhaopinrun Coverage Results" MODIFIED="1567089803871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/crossin_crawler$sinarun.coverage" NAME="sinarun Coverage Results" MODIFIED="1566781458538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/crossin_crawler$movie.coverage" NAME="movie Coverage Results" MODIFIED="1567251309752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/crossin_crawler$movie.coverage" NAME="movie Coverage Results" MODIFIED="1567252652986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/crossin_crawler$lianjiarun.coverage" NAME="lianjiarun Coverage Results" MODIFIED="1566908839517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/crossin_crawler$wordcloudrun.coverage" NAME="wordcloudrun Coverage Results" MODIFIED="1567252902063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/crossin_crawler$pyechartsrun.coverage" NAME="pyechartsrun Coverage Results" MODIFIED="1567248474264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
