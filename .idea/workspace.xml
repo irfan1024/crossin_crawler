@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e6d5563-e490-4eba-84d6-741086ff0354" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/wordcloud.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/render.html" beforeDir="false" afterPath="$PROJECT_DIR$/render.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lianjia.py" beforeDir="false" afterPath="$PROJECT_DIR$/lianjia.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sina.py" beforeDir="false" afterPath="$PROJECT_DIR$/sina.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhaopin.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhaopin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhihu.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhihu.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -258,6 +259,7 @@
       <workItem from="1567084408984" duration="5751000" />
       <workItem from="1567211961538" duration="5640000" />
       <workItem from="1567249530196" duration="2390000" />
+      <workItem from="1567254857545" duration="283000" />
     </task>
     <servers />
   </component>

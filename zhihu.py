@@ -59,7 +59,7 @@ if __name__ == '__main__':
     #url, headers
     url = 'https://www.zhihu.com/api/v3/feed/topstory/recommend'
     user_agent = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36'
-    cookies = '_zap=9d702648-1c02-4d51-8a5f-ba5be53c05d7; _xsrf=c0347064-31c6-4a06-9175-dc0acc647bb7; d_c0="AABhptIh8Q-PTtc6uV1qBbPWkPhI_E5coZk=|1566660140"; capsion_ticket="2|1:0|10:1566780547|14:capsion_ticket|44:ZWZkMjhmMDA4ZGJjNGE2OGE2ZDVkNWJmNjFhZWRjOTU=|1de7c7f5ce5fba7ad373bba5255017c3df389bbede623a1d8c46f9fbdb0604a3"; z_c0="2|1:0|10:1566780551|4:z_c0|92:Mi4xODVBVEFBQUFBQUFBQUdHbTBpSHhEeVlBQUFCZ0FsVk5obnBRWGdENU5WRW9WQ1pKVTVLOG1nU2YxRk9nX2VhaTZB|6a93da3335d2400f5806be5481658a427adf9f4f7e58c0812807da549dea4990"; q_c1=7cee8b00ac7f440eb8030707e630ea45|1566783010000|1566783010000; tshl=; tst=r; tgw_l7_route=73af20938a97f63d9b695ad561c4c10c'
+    cookies = '######'
     headers = {
         "User-Agent": user_agent,
         'Cookie': cookies,
