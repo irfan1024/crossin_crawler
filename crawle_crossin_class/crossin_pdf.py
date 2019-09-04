@@ -32,10 +32,8 @@ def get_first_page():
     html_json = req.text
     html = bs4.BeautifulSoup(html_json, 'lxml')
     filename = html.find_all('a', class_='first-page')[0].get_text()
+    html.find('img')['src'] = '../crawle_crossin_class/crossin.jpg'
     content = html.find('div', class_='ppx-main-block').prettify()
-
-    # content = content1[0].get_text() + content1[1].get_text() + content1[2].get_text() + content1[3].get_text()
-    # print(content)
     try:
         with open('%s.html' % filename, 'w', encoding='utf-8') as f:
             f.write(content)
