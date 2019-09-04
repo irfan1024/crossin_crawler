@@ -48,14 +48,14 @@ def get_first_page():
 #获取课程
 def get_classes(first_page):
     htmls = []
-    htmls.append(first_page)
+    shit = 0
     url = 'https://python666.cn/cls/lesson/1'
     while True:
         html = get_data(url)
         next_list = 'https://python666.cn/cls/lesson' + html.find('li', class_='next').select('li > a')[0][
             'href'].strip('..')
         print(next_list)
-        content1 = html.find('div', class_='ppx-main-block').prettify()#prettify这个方法是用来优化html页面并可以显示图片!
+        content1 = str(shit) + html.find('div', class_='ppx-main-block').prettify()#prettify这个方法是用来优化html页面并可以显示图片!
         title = html.find('a', class_='list-group-item-info').get_text()
         htmls.append(title + '.html')
         try:
@@ -67,19 +67,22 @@ def get_classes(first_page):
             break
         else:
             url = next_list
+            shit += 1
     print(htmls)
-    htmltopdf(htmls)
+    htmltopdf(htmls,first_page)
 
 #pdf转化函数
-def htmltopdf(htmls):
+def htmltopdf(htmls, first_page):
     #wkhtmltopdf这里必须要有安装路径,以及出现了中文编码问题,需要在options中进行设置
     path_wk = r"D:\pdfkit\wkhtmltopdf\bin\wkhtmltopdf.exe"
     config = pdfkit.configuration(wkhtmltopdf=path_wk)
     options = {
-        'page-size': 'A4',
-        'encoding': 'UTF-8',
+        'page-size' : 'A4',
+        'encoding' : 'UTF-8',
+        'no-outline' : None,
     }
-    pdfkit.from_file(sorted(htmls), 'python666.pdf', configuration=config, options=options)
+    cover = first_page
+    pdfkit.from_file(htmls, 'python666.pdf', configuration=config, options=options, cover=cover)
 
 
 #主函数
