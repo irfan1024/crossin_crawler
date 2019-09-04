@@ -1,7 +1,7 @@
-#!/user/bin/env python
-#-*- coding"utf-8 -*-
+# !/user/bin/env python
+# -*- coding"utf-8 -*-
 from pyecharts import options as opts
-from pyecharts.charts import Page, WordCloud
+from pyecharts.charts import WordCloud
 
 words = [
     ("小仙女", 10000),
@@ -26,3 +26,9 @@ wordcloud = WordCloud()
 wordcloud.add('词云', words, word_size_range=[20, 100])
 wordcloud.set_global_opts(title_opts=opts.TitleOpts(title="wordcloud-基本示例"))
 wordcloud.render()
+
+
+
+
+
+
