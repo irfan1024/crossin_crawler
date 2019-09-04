@@ -1,0 +1,132 @@
+39<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第39课】用文件保存游戏（1）
+ </h2>
+ <br/>
+ <p>
+  到目前为止，python最入门的语法我们都已经有所涉及，相信大家一路学过来，多少也能写出一些小程序。在接下来的课程中，我会基于实例来更深入地介绍python。
+ </p>
+ <p>
+  现在，我要在最早我们开发的那个猜数字游戏的基础上，增加保存成绩的功能。用到的方法就是前几课讲过的文件读写。今天是第一部分。
+ </p>
+ <p>
+  在动手写代码前，先想清楚我们要解决什么问题，打算怎么去解决。你可以选择根据每次游戏算出一个得分，记录累计的得分。也可以让每次猜错都扣xx分，猜对之后再加xx分，记录当前分数。而我现在打算记录下我玩了多少次，最快猜出来的轮数，以及平均每次猜对用的轮数。
+ </p>
+ <p>
+  于是，我要在文件中记录3个数字，如：
+ </p>
+ <p>
+  3 5 31
+ </p>
+ <p>
+ </p>
+ <p>
+  它们分别是：总游戏次数，最快猜出的轮数，和猜过的总轮数（这里我选择记录总轮数，然后每次再算出平均轮数）
+ </p>
+ <p>
+ </p>
+ <p>
+  接下来可以往代码里加功能了，首先是读取成绩。新建好一个game.txt，里面写上：
+ </p>
+ <p>
+  0 0 0
+ </p>
+ <p>
+  作为程序的初始数据。
+ </p>
+ <p>
+ </p>
+ <p>
+  用之前的方法，读入文件：
+ </p>
+ <pre class="language-python"><code>f = open('game.txt')
+score = f.read().split()</code></pre>
+ <p>
+ </p>
+ <p>
+  这里，我用了open方法，它和file()的效果一样。另外，我还用了绝对路径。当你写这个程序时，记得用你自己电脑上的路径。
+ </p>
+ <p>
+ </p>
+ <p>
+  为便于理解，把数据读进来后，分别存在3个变量中。
+ </p>
+ <pre class="language-python"><code>game_times = int(score[0])
+min_times = int(score[1])
+total_times = int(score[2])</code></pre>
+ <p>
+ </p>
+ <p>
+  平均轮数根据总轮数和游戏次数相除得到：
+ </p>
+ <pre class="language-python"><code>avg_times = total_times / game_times</code></pre>
+ <p>
+ </p>
+ <p>
+  注意两点：
+ </p>
+ <p>
+  1.python 3的除法运算中，一个"/"的除法，结果为浮点数。如果需要得到结果的整数部分（不是对结果四舍五入），要用"//"，即两个斜杠。而"%"代表对结果取余数。
+ </p>
+ <p>
+  2.因为0是不能作为除数的，所以这里还需要加上判断：
+ </p>
+ <pre class="language-python"><code>if game_times &gt; 0:
+   avg_times = total_times / game_times
+else:
+   avg_times = 0</code></pre>
+ <p>
+ </p>
+ <p>
+  然后，在让玩家开始猜数字前，输出他之前的成绩信息：
+ </p>
+ <pre class="language-python"><code>print ('你已经玩了%d次，最少%d轮猜出答案，平均%.2f轮猜出答案' % (game_times, min_times, avg_times))</code></pre>
+ <p>
+ </p>
+ <p>
+  %.2f这样的写法我们以前也用过，作用是保留两位小数。
+ </p>
+ <p>
+ </p>
+ <p>
+  好了，运行程序看一下效果：
+ </p>
+ <p>
+  你已经玩了0次，最少0轮猜出答案，平均0轮猜出答案
+ </p>
+ <p>
+ </p>
+ <p>
+  由于还没有做保存功能，我们手动去文件里改一下成绩看运行效果。（其实有些小游戏就可以用类似的方法作弊）
+ </p>
+ <p>
+ </p>
+ <p>
+  下一课，我们要把真实的游戏数据保存到文件中。
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/39-0.png" style="width: 100%; height: auto;"/>
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../39">
+     <span aria-hidden="true">
+      ←
+     </span>
+     38.模块
+    </a>
+   </li>
+   <li class="next">
+    <a href="../41">
+     40.用文件保存游戏（2）
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

@@ -1,0 +1,141 @@
+55<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第55课】正则表达式（2）
+ </h2>
+ <br/>
+ <p>
+  有同学问起昨天那段测试代码里的问题，我来简单说一下。
+ </p>
+ <p>
+ </p>
+ <p>
+  1.
+ </p>
+ <pre class="language-python"><code>r"hi"</code></pre>
+ <p>
+ </p>
+ <p>
+  这里字符串前面加了r，是raw的意思，它表示对字符串不进行转义。为什么要加这个？你可以试试print "\bhi"和r"\bhi"的区别。
+ </p>
+ <pre class="language-python"><code>&gt;&gt;&gt; print ("\bhi")
+hi
+&gt;&gt;&gt; print (r"\bhi")
+\bhi</code></pre>
+ <p>
+ </p>
+ <p>
+  可以看到，不加r的话，\b就没有了。因为python的字符串碰到“\”就会转义它后面的字符。如果你想在字符串里打“\”，则必须要打“\\”。
+ </p>
+ <pre class="language-python"><code>&gt;&gt;&gt; print ("\\bhi")
+\bhi</code></pre>
+ <p>
+ </p>
+ <p>
+  这样的话，我们的正则表达式里就会多出很多“\”，让本来就已经复杂的字符串混乱得像五仁月饼一般。但加上了“r”，就表示不要去转义字符串中的任何字符，保持它的原样。
+ </p>
+ <p>
+ </p>
+ <p>
+  2.
+ </p>
+ <pre class="language-python"><code>re.findall(r"hi", text)</code></pre>
+ <p>
+ </p>
+ <p>
+  re是python里的正则表达式模块。findall是其中一个方法，用来按照提供的正则表达式，去匹配文本中的所有符合条件的字符串。返回结果是一个包含所有匹配的list。
+ </p>
+ <p>
+ </p>
+ <p>
+  3.
+ </p>
+ <p>
+  今天主要说两个符号“.”和“*”，顺带说下“\S”和“?”。
+ </p>
+ <p>
+  “.”在正则表达式中表示除换行符以外的任意字符。在上节课提供的那段例子文本中：
+ </p>
+ <p>
+  Hi, I am Shirley Hilton. I am his wife.
+ </p>
+ <p>
+ </p>
+ <p>
+  如果我们用“i.”去匹配，就会得到
+ </p>
+ <p>
+  ['i,', 'ir', 'il', 'is', 'if']
+ </p>
+ <p>
+ </p>
+ <p>
+  你若是暴力一点，也可以直接用“.”去匹配，看看会得到什么。
+ </p>
+ <p>
+ </p>
+ <p>
+  与“.”类似的一个符号是“\S”，它表示的是不是空白符的任意字符。注意是大写字符S。
+ </p>
+ <p>
+ </p>
+ <p>
+  4.
+ </p>
+ <p>
+  在很多搜索中，会用“?”表示任意一个字符，“*”表示任意数量连续字符，这种被称为通配符。但在正则表达式中，任意字符是用“.”表示，而“*”则不是表示字符，而是表示数量：它表示前面的字符可以重复任意多次（包括0次），只要满足这样的条件，都会被表达式匹配上。
+ </p>
+ <p>
+ </p>
+ <p>
+  结合前面的“.*”，用“I.*e”去匹配，想一下会得到什么结果？
+ </p>
+ <p>
+  ['I am Shirley Hilton. I am his wife']
+ </p>
+ <p>
+ </p>
+ <p>
+  是不是跟你想的有些不一样？也许你会以为是
+ </p>
+ <p>
+  ['I am Shirle', 'I am his wife']
+ </p>
+ <p>
+ </p>
+ <p>
+  这是因为“*”在匹配时，会匹配尽可能长的结果。如果你想让他匹配到最短的就停止，需要用“.*?”。如“I.*?e”，就会得到第二种结果。这种匹配方式被称为懒惰匹配，而原本尽可能长的方式被称为贪婪匹配。
+ </p>
+ <p>
+ </p>
+ <p>
+  最后留一道习题：
+ </p>
+ <p>
+  从下面一段文本中，匹配出所有s开头，e结尾的单词。
+ </p>
+ <p>
+ </p>
+ <p>
+  site sea sue sweet see case sse ssee loses
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../56">
+     <span aria-hidden="true">
+      ←
+     </span>
+     54.正则表达式（1）
+    </a>
+   </li>
+   <li class="next">
+    <a href="../58">
+     56.正则表达式（3）
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

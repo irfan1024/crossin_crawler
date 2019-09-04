@@ -1,0 +1,140 @@
+68<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第68课】lambda 表达式
+ </h2>
+ <br/>
+ <p>
+  Python 是一门简洁的语言，lambda 表达式则充分体现了 Python 这一特点。
+ </p>
+ <p>
+ </p>
+ <p>
+  lambda 表达可以被看做是一种匿名函数。它可以让你快速定义一个极度简单的单行函数。譬如这样一个实现三个数相加的函数：
+ </p>
+ <pre class="language-python"><code>def sum(a, b, c):
+    return a + b + c
+    
+print (sum(1, 2, 3))
+print (sum(4, 5, 6))</code></pre>
+ <p>
+ </p>
+ <p>
+  输出：
+ </p>
+ <pre class="language-python"><code>6
+15</code></pre>
+ <p>
+ </p>
+ <p>
+  如果使用 lambda 表达式来实现：
+ </p>
+ <pre class="language-python"><code>sum = lambda a, b, c: a + b + c
+
+print (sum(1, 2, 3))
+print (sum(4, 5, 6))</code></pre>
+ <p>
+ </p>
+ <p>
+  输出：
+ </p>
+ <pre class="language-python"><code>6
+15</code></pre>
+ <p>
+ </p>
+ <p>
+  两种方法的结果是相同的。
+ </p>
+ <p>
+ </p>
+ <p>
+  lambda 表达式的语法格式：
+ </p>
+ <p>
+ </p>
+ <p>
+  lambda 参数列表: 表达式
+ </p>
+ <p>
+ </p>
+ <p>
+  定义 lambda 表达式时，参数列表周围没有括号，返回值前没有 return 关键字，也没有函数名称。
+ </p>
+ <p>
+ </p>
+ <p>
+  它的写法比 def 更加简洁。但是，它的主体只能是一个表达式，不可以是代码块，甚至不能是命令（print 不能用在 lambda 表达式中）。所以 lambda 表达式能表达的逻辑很有限。
+ </p>
+ <p>
+ </p>
+ <p>
+  lambda 表达式创建了一个函数对象，可以把这个对象赋值给一个变量进行调用，就像上面的例子中一样。
+ </p>
+ <p>
+ </p>
+ <p>
+  来看一个复杂一点的例子，把 lambda 表达式用在 def 函数定义中：
+ </p>
+ <pre class="language-python"><code>def fn(x):
+    return lambda y: x + y
+    
+a = fn(2)
+print (a(3))</code></pre>
+ <p>
+ </p>
+ <p>
+  输出：
+ </p>
+ <pre class="language-python"><code>5</code></pre>
+ <p>
+ </p>
+ <p>
+  这里，fn 函数的返回值是一个 lambda 表达式，也就等于是一个函数对象。当以参数2来调用 fn 时，得到的结果就是：
+ </p>
+ <pre class="language-python"><code>lambda y: 2 + y</code></pre>
+ <p>
+ </p>
+ <p>
+  a = fn(2) 就相当于：
+ </p>
+ <pre class="language-python"><code>a = lambda y: 2 + y</code></pre>
+ <p>
+ </p>
+ <p>
+  所以 a(3) 的结果就是5。
+ </p>
+ <p>
+ </p>
+ <p>
+  lambda 表达式其实只是一种编码风格，这种写法更加 pythonic。这并不意味着你一定要使用它。事实上，任何可以使用 lambda 表达式的地方，都可以通过普通的 def 函数定义来替代。在一些需要重复使用同一函数的地方，def 可以避免重复定义函数。况且 def 函数更加通用，某些情况可以带来更好地代码可读性。
+ </p>
+ <p>
+ </p>
+ <p>
+  而对于像 filter、sort 这种需要内嵌函数的方法，lambda 表达式就会显得比较合适。这个我以后会再单独介绍。
+ </p>
+ <p>
+ </p>
+ <p>
+  当然对于初学者来说，了解 lambda 表达式还有一个重要作用就是，看懂别人写的代码。
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../69">
+     <span aria-hidden="true">
+      ←
+     </span>
+     67.函数的参数传递（3）
+    </a>
+   </li>
+   <li class="next">
+    <a href="../71">
+     69.变量的作用域
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

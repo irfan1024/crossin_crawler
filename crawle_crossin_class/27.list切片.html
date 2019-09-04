@@ -1,0 +1,169 @@
+27<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第27课】list切片
+ </h2>
+ <br/>
+ <p>
+  list有两类常用操作：
+  <strong>
+   索引(index)
+  </strong>
+  和
+  <strong>
+   切片(slice)
+  </strong>
+  。
+ </p>
+ <p>
+ </p>
+ <p>
+  昨天我们说的用[]加序号访问的方法就是索引操作。
+ </p>
+ <p>
+ </p>
+ <p>
+  除了指定位置进行索引外，list还可以处理负数的索引。继续用昨天的例子：
+ </p>
+ <pre class="language-python"><code>l = [365, 'everyday', 0.618, True]</code></pre>
+ <p>
+ </p>
+ <p>
+  l[-1]表示l中的最后一个元素。
+ </p>
+ <p>
+  l[-3]表示倒数第3个元素。
+ </p>
+ <p>
+ </p>
+ <p>
+  <strong>
+   切片操作符
+  </strong>
+  是在[]内提供一对可选数字，用:分割。冒号前的数表示切片的开始位置，冒号后的数字表示切片到哪里结束。同样，计数从0开始。
+ </p>
+ <p>
+  注意：开始位置包含在切片中，而结束位置不包括。
+ </p>
+ <p>
+ </p>
+ <pre class="language-python"><code>l[1:3]</code></pre>
+ <p>
+  得到的结果是['everyday', 0.618]。
+ </p>
+ <p>
+ </p>
+ <p>
+  如果不指定第一个数，切片就从列表第一个元素开始。
+ </p>
+ <p>
+  如果不指定第二个数，就一直到最后一个元素结束。
+ </p>
+ <p>
+  都不指定，则返回整个列表。
+ </p>
+ <pre class="language-python"><code>l[:3]
+l[1:]
+l[:]</code></pre>
+ <p>
+  注意：不管是返回一部分，还是整个列表，都是一个新的对象，与不影响原来的列表。
+ </p>
+ <p>
+ </p>
+ <p>
+  同索引一样，切片中的数字也可以使用负数。比如：
+ </p>
+ <pre class="language-python"><code>l[1:-1]</code></pre>
+ <p>
+ </p>
+ <p>
+  得到['everyday', 0.618]
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/27-0.png" style="width: 100%; height: auto;"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  #==== 点球小游戏 ====#
+ </p>
+ <p>
+ </p>
+ <p>
+  昨天有了一次罚球的过程，今天我就让它循环5次，并且记录下得分。先不判断胜负。
+ </p>
+ <p>
+ </p>
+ <p>
+  用score_you表示你的得分，score_com表示电脑得分。开始都为0，每进一球就加1。
+ </p>
+ <p>
+ </p>
+ <pre class="language-python"><code>from random import choice
+
+score_you = 0
+score_com = 0
+direction = ['left', 'center', 'right']
+
+for i in range(5):
+   print ('==== Round %d - You Kick! ====' % (i+1))
+   print ('Choose one side to shoot:')
+   print ('left, center, right')
+   you = input()
+   print ('You kicked ' + you)
+   com = choice(direction)
+   print ('Computer saved ' + com)
+   if you != com:
+       print ('Goal!')
+       score_you += 1
+   else:
+       print ('Oops...')
+   print ('Score: %d(you) - %d(com)\n' % (score_you, score_com))
+
+   print ('==== Round %d - You Save! ====' % (i+1))
+   print ('Choose one side to save:')
+   print ('left, center, right')
+   you = input()
+   print ('You saved ' + you)
+   com = choice(direction)
+   print ('Computer kicked ' + com)
+   if you == com:
+       print ('Saved!')
+   else:
+       print ('Oops...')
+       score_com += 1
+   print ('Score: %d(you) - %d(com)\n' % (score_you, score_com))</code></pre>
+ <p>
+ </p>
+ <p>
+  这段代码里有两段相似度很高，想想是不是可以有办法可以用个函数把它们分离出来。
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/27-1.png" style="width: 100%; height: auto;"/>
+ </p>
+ <p>
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../27">
+     <span aria-hidden="true">
+      ←
+     </span>
+     26.操作list
+    </a>
+   </li>
+   <li class="next">
+    <a href="../29">
+     28.字符串的分割
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

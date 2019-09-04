@@ -1,0 +1,198 @@
+61<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第61课】调试程序
+ </h2>
+ <br/>
+ <p>
+  写代码，不可避免地会出现bug。很多人在初学编程的时候，当写完程序运行时，发现结果与自己预料中的不同，或者程序意外中止了，就一时没了想法，不知道该从何下手，只能反复重新运行程序，期待忽然有次结果就对了。
+ </p>
+ <p>
+ </p>
+ <p>
+  今天我就来讲讲代码遇到问题时的一些简单处理方法。
+ </p>
+ <p>
+ </p>
+ <p>
+  1. 读错误信息
+ </p>
+ <p>
+  来看如下一个例程：
+ </p>
+ <pre class="language-python"><code>import random
+a = 0
+for i in range(5):
+    b = random.choice(range(5))
+    a += i / b
+print (a)</code></pre>
+ <p>
+ </p>
+ <p>
+  这个程序中，i从0循环到4，每次循环中，b是0到4中的一个随机数。把i/b的结果累加到a上，最后输出结果。
+ </p>
+ <p>
+ </p>
+ <p>
+  运行这段程序，有时候会输出结果，有时候却跳出错误信息：
+ </p>
+ <p>
+  Traceback (most recent call last):
+ </p>
+ <p>
+  File "C:\Users\Crossin\Desktop\py\test.py", line 5, in &lt;module&gt;
+ </p>
+ <p>
+  a += i / b
+ </p>
+ <p>
+  ZeroDivisionError: integer division or modulo by zero
+ </p>
+ <p>
+ </p>
+ <p>
+  有些同学看见一段英文提示就慌了。其实没那么复杂，python的错误提示做得还是很标准的。
+ </p>
+ <p>
+ </p>
+ <p>
+  它告诉我们错误发生在test.py文件中的第5行
+ </p>
+ <pre class="language-python"><code>a += i / b</code></pre>
+ <p>
+  这一句上。
+ </p>
+ <p>
+ </p>
+ <p>
+  这个错误是“ZeroDivisionError”，也就是除零错。
+ </p>
+ <p>
+ </p>
+ <p>
+  “integer division or modulo by zero”，整数被0除或者被0模(取余数)。
+ </p>
+ <p>
+ </p>
+ <p>
+  因为0不能作为除数，所以当b随机到0的时候，就会引发这个错误。
+ </p>
+ <p>
+ </p>
+ <p>
+  知道了原因，就可以顺利地解决掉这个bug。
+ </p>
+ <p>
+ </p>
+ <p>
+  以后在写代码的时候，如果遇到了错误，先别急着去改代码。试着去读一读错误提示，看看里面都说了些啥。
+ </p>
+ <p>
+ </p>
+ <p>
+  2. 输出调试信息
+ </p>
+ <p>
+  我们在所有课程的最开始就教了输出函数“print”。它是编程中最简单的调试手段。有的时候，仅从错误提示仍然无法判断出程序错误的原因，或者没有发生错误，但程序的结果就是不对。这种情况下，通过输出程序过程中的一些状态，可以帮助分析程序。
+ </p>
+ <p>
+ </p>
+ <p>
+  把前面那个程序改造一下，加入一些与程序功能无关的输出语句：
+ </p>
+ <pre class="language-python"><code>import random
+a = 0
+for i in range(5):
+    print ('i: %d' % i)
+    b = random.choice(range(5))
+    print ('b: %d' % b)
+    a += i / b
+    print ('a: %d' % a)
+    print ()
+print (a)</code></pre>
+ <p>
+ </p>
+ <p>
+  运行后的输出结果（每次结果都会不一样）：
+ </p>
+ <p>
+  i: 0
+ </p>
+ <p>
+  b: 3
+ </p>
+ <p>
+  a: 0
+ </p>
+ <p>
+ </p>
+ <p>
+  i: 1
+ </p>
+ <p>
+  b: 3
+ </p>
+ <p>
+  a: 0
+ </p>
+ <p>
+ </p>
+ <p>
+  i: 2
+ </p>
+ <p>
+  b: 3
+ </p>
+ <p>
+  a: 0
+ </p>
+ <p>
+ </p>
+ <p>
+  i: 3
+ </p>
+ <p>
+  b: 0
+ </p>
+ <p>
+  Traceback (most recent call last):
+ </p>
+ <p>
+  File "C:\Users\Crossin\Desktop\py\test.py", line 7, in &lt;module&gt;
+ </p>
+ <p>
+  a += i / b
+ </p>
+ <p>
+  ZeroDivisionError: integer division or modulo by zero
+ </p>
+ <p>
+ </p>
+ <p>
+  当b的值为0时，发生了除零错。这次可以更清晰地看出程序出错时的状态。
+ </p>
+ <p>
+ </p>
+ <p>
+  在真实开发中，程序的结构可能会非常复杂。通过输出调试信息，可以有效地缩小范围、定位错误发生的位置，确认错误发生时的场景，进而找出错误原因。
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../62">
+     <span aria-hidden="true">
+      ←
+     </span>
+     60.计时
+    </a>
+   </li>
+   <li class="next">
+    <a href="../64">
+     62.python 2 到 3 的新手坑
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

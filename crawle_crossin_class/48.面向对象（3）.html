@@ -1,0 +1,132 @@
+48<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第48课】面向对象（3）
+ </h2>
+ <br/>
+ <p>
+  面向对象是比较复杂的概念，初学很难理解。我曾经对人夸张地说，面向对象是颠覆你编程三观的东西，得花上不少时间才能搞清楚。我自己当年初学Java的时候，也是折腾了很久才理清点头绪。所以我在前面的课程中没有去提及类和对象这些概念，不想在一开始给大家造成混淆。
+ </p>
+ <p>
+ </p>
+ <p>
+  在刚开始编程的时候，从上到下一行行执行的简单程序容易被理解，即使加上if、while、for之类的语句以及函数调用，也还是不算困难。有了面向对象之后，程序的执行路径就变得复杂，很容易让人混乱。不过当你熟悉之后会发现，面向对象是比面向过程更合理的程序设计方式。
+ </p>
+ <p>
+ </p>
+ <p>
+  今天我用一个例子来展示两种程序设计方式的不同。
+ </p>
+ <p>
+ </p>
+ <p>
+  假设我们有一辆汽车，我们知道它的速度(60km/h)，以及A、B两地的距离(100km)。要算出开着这辆车从A地到B地花费的时间。（很像小学数学题是吧？）
+ </p>
+ <p>
+ </p>
+ <p>
+  面向过程的方法：
+ </p>
+ <pre class="language-python"><code>speed = 60.0
+distance = 100.0
+time = distance / speed
+print (time)</code></pre>
+ <p>
+ </p>
+ <p>
+  面向对象的方法：
+ </p>
+ <pre class="language-python"><code>class Car:
+    speed = 0
+    def drive(self, distance):
+        time = distance / self.speed
+        print (time)
+
+car = Car()
+car.speed = 60.0
+car.drive(100.0)</code></pre>
+ <p>
+ </p>
+ <p>
+  看上去似乎面向对象没有比面向过程更简单，反而写了更多行代码。
+ </p>
+ <p>
+ </p>
+ <p>
+  但是，如果我们让题目再稍稍复杂一点。假设我们又有了一辆更好的跑车，它的速度是150km/h，然后我们除了想从A到B，还要从B到C（距离200km）。要求分别知道这两种车在这两段路上需要多少时间。
+ </p>
+ <p>
+ </p>
+ <p>
+  面向过程的方法：
+ </p>
+ <pre class="language-python"><code>speed1 = 60.0
+distance1 = 100.0
+time1 = distance1 / speed1
+print (time1)
+
+distance2 = 200.0
+time2 = distance2 / speed1
+print (time2)
+
+speed2 = 150.0
+time3 = distance1 / speed2
+print (time3)
+
+time4 = distance2 / speed2
+print (time4)</code></pre>
+ <p>
+ </p>
+ <p>
+  面向对象的方法：
+ </p>
+ <pre class="language-python"><code>class Car:
+    speed = 0
+    def drive(self, distance):
+        time = distance / self.speed
+        print (time)
+
+car1 = Car()
+car1.speed = 60.0
+car1.drive(100.0)
+car1.drive(200.0)
+
+car2 = Car()
+car2.speed = 150.0
+car2.drive(100.0)
+car2.drive(200.0)</code></pre>
+ <p>
+ </p>
+ <p>
+  对比两种方法，面向过程把数据和处理数据的计算全部放在一起，当功能复杂之后，就会显得很混乱，且容易产生很多重复的代码。而面向对象，把一类数据和处理这类数据的方法封装在一个类中，让程序的结构更清晰，不同的功能之间相互独立。这样更有利于进行模块化的开发方式。
+ </p>
+ <p>
+ </p>
+ <p>
+  面向对象的水还很深，我们这里只是粗略一瞥。它不再像之前print、while这些概念那么一目了然。但也没必要对此畏惧，等用多了自然就熟悉了。找一些实例亲手练练，会掌握得更快。遇到问题时，欢迎来论坛和群里讨论。
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/49-0.png" style="width: 100%; height: auto;"/>
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../49">
+     <span aria-hidden="true">
+      ←
+     </span>
+     47.面向对象（2）
+    </a>
+   </li>
+   <li class="next">
+    <a href="../51">
+     49.面向对象（4）
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

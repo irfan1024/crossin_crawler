@@ -1,0 +1,212 @@
+13<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第13课】字符串
+ </h2>
+ <br/>
+ <p>
+  字符串就是一组字符的序列（序列！又见序列！还记得我在说 for 循环的时候就提到过的序列吗？今天仍然不去细说它。），它一向是编程中的常见问题。之前我们用过它，以后我们还要不停地用它。
+ </p>
+ <p>
+ </p>
+ <p>
+  python中最常用的字符串表示方式是单引号（''）和双引号（""）。我还是要再说：一定得是英文标点！
+ </p>
+ <p>
+ </p>
+ <p>
+  <strong>
+   'string'
+  </strong>
+  和
+  <strong>
+   "string"
+  </strong>
+  对于 Python 来说效果是一样的。
+ </p>
+ <p>
+ </p>
+ <p>
+  可以直接输出一个字符串
+ </p>
+ <pre class="language-python"><code>print ('good')</code></pre>
+ <p>
+ </p>
+ <p>
+  也可以用一个变量来保存字符串，然后输出
+ </p>
+ <pre class="language-python"><code>str = "bad"
+print(str)</code></pre>
+ <p>
+ </p>
+ <p>
+  如果你想表示一段带有英文单引号或者双引号的文字，那么表示这个字符串的引号就要与内容区别开。
+ </p>
+ <p>
+  内容带有单引号，就用双引号表示
+ </p>
+ <pre class="language-python"><code>"It's good"</code></pre>
+ <p>
+ </p>
+ <p>
+  反之亦然
+ </p>
+ <pre class="language-python"><code>'You are a "BAD" man'</code></pre>
+ <p>
+ </p>
+ <p>
+  还有一种在字符串中表示引号的方法，就是用
+  <strong>
+   \
+  </strong>
+  ，可以不受引号的限制
+ </p>
+ <p>
+ </p>
+ <p>
+  <strong>
+   \'
+  </strong>
+  表示单引号，
+  <strong>
+   \"
+  </strong>
+  表示双引号
+ </p>
+ <pre class="language-python"><code>'I\'m a \"good\" teacher'</code></pre>
+ <p>
+ </p>
+ <p>
+  <strong>
+   \
+  </strong>
+  被称作
+  <strong>
+   转译字符
+  </strong>
+  ，除了用来表示引号，还有比如用
+ </p>
+ <ul>
+  <li>
+   <strong>
+    <strong>
+     \n
+    </strong>
+    <span style="font-weight: 400;">
+     表示字符串中的换行（相当于按一下回车键的效果）
+    </span>
+   </strong>
+  </li>
+  <li>
+   <strong>
+    <span style="font-weight: 400;">
+     <strong>
+      \t
+     </strong>
+     表示字符串中的制表符（相当于按一下tab键的效果）
+    </span>
+   </strong>
+  </li>
+  <li>
+   <strong>
+    <span style="font-weight: 400;">
+     <strong>
+      \\
+     </strong>
+     表示字符串中的
+     <strong>
+      \
+     </strong>
+    </span>
+   </strong>
+   <span style="font-weight: 400;">
+    （因为单个斜杠被用来做转义了，所以真的要表示 \ 字符，就要两个斜杠）
+   </span>
+  </li>
+ </ul>
+ <p>
+ </p>
+ <p>
+  <strong>
+   \
+  </strong>
+  还有个用处，就是用来在代码中换行，而不影响输出的结果：
+ </p>
+ <pre class="language-python"><code>"this is the \
+same line"</code></pre>
+ <p>
+ </p>
+ <p>
+  这个字符串仍然只有一行，和
+ </p>
+ <pre class="language-python"><code>"this is the same line"</code></pre>
+ <p>
+  是一样的，只是在代码中换了行。当你要写一行很长的代码时，这个会派上用场。
+ </p>
+ <p>
+ </p>
+ <p>
+  python中还有一种表示字符串的方法：
+ </p>
+ <p>
+  三个引号（'''）或者（"""）
+ </p>
+ <p>
+ </p>
+ <p>
+  在三个引号中，你可以方便地使用单引号和双引号，并且可以直接换行
+ </p>
+ <pre class="language-python"><code>'''
+"What's your name?" I asked.
+"I'm Han Meimei."
+'''</code></pre>
+ <p>
+ </p>
+ <p>
+  #======== 课后作业 =========#
+ </p>
+ <p>
+ </p>
+ <p>
+  用print输出以下文字：
+ </p>
+ <pre class="language-markup"><code>#1
+He said, "I'm yours!"
+
+#2
+\\_v_//
+
+#3
+Stay hungry,
+stay foolish.
+             -- Steve Jobs
+
+#4
+*
+***
+*****
+***
+*
+</code></pre>
+ <p>
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../13">
+     <span aria-hidden="true">
+      ←
+     </span>
+     12.for循环
+    </a>
+   </li>
+   <li class="next">
+    <a href="../15">
+     14.字符串格式化
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

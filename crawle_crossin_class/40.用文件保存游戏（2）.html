@@ -1,0 +1,89 @@
+40<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第40课】用文件保存游戏（2）
+ </h2>
+ <br/>
+ <p>
+  话接上回。我们已经能从文件中读取游戏成绩数据了，接下来就要考虑，怎么把我们每次游戏的结果保存进去。
+ </p>
+ <p>
+ </p>
+ <p>
+  首先，我们需要有一个变量来记录每次游戏所用的轮数：
+ </p>
+ <pre class="language-python"><code>times = 0</code></pre>
+ <p>
+ </p>
+ <p>
+  然后在游戏每进行一轮的时候，累加这个变量：
+ </p>
+ <pre class="language-python"><code>times += 1</code></pre>
+ <p>
+ </p>
+ <p>
+  当游戏结束后，我们要把这个变量的值，也就是本次游戏的数据，添加到我们的记录中。
+ </p>
+ <p>
+ </p>
+ <p>
+  如果是第一次玩，或者本次的轮数比最小轮数还少，就记录本次成绩为最小轮数：
+ </p>
+ <pre class="language-python"><code>if game_times == 0 or times &lt; min_times:
+   min_times = times</code></pre>
+ <p>
+ </p>
+ <p>
+  把本次轮数加到游戏总轮数里：
+ </p>
+ <pre class="language-python"><code>total_times += times</code></pre>
+ <p>
+ </p>
+ <p>
+  把游戏次数加1：
+ </p>
+ <pre class="language-python"><code>game_times += 1</code></pre>
+ <p>
+ </p>
+ <p>
+  现在有了我们需要的数据，把它们拼成我们需要存储的格式：
+ </p>
+ <pre class="language-python"><code>result = '%d %d %d' % (game_times, min_times, total_times)</code></pre>
+ <p>
+ </p>
+ <p>
+  写入到文件中：
+ </p>
+ <pre class="language-python"><code>f = open('game.txt', 'w')
+f.write(result)
+f.close()</code></pre>
+ <p>
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/40-0.png" style="width: 100%; height: auto;"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  按照类似的方法，你也可以记录一些其他的数据，比如设定一种记分规则作为游戏得分。虽然在这个小游戏里，记录成绩并没有太大的乐趣，但通过文件来记录数据的方法，以后会在很多程序中派上用场。
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../40">
+     <span aria-hidden="true">
+      ←
+     </span>
+     39.用文件保存游戏（1）
+    </a>
+   </li>
+   <li class="next">
+    <a href="../42">
+     41.用文件保存游戏（3）
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

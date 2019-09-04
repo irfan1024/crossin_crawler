@@ -1,0 +1,132 @@
+17<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第17课】类型转换
+ </h2>
+ <br/>
+ <p>
+  #==== 类型转换 ====#
+ </p>
+ <p>
+ </p>
+ <p>
+  python的几种最基本的数据类型，我们已经见过：
+ </p>
+ <ul>
+  <li>
+   字符串
+  </li>
+  <li>
+   整数
+  </li>
+  <li>
+   小数 （浮点数）
+  </li>
+  <li>
+   bool类型
+  </li>
+ </ul>
+ <p>
+ </p>
+ <p>
+  python在定义一个变量时不需要给它限定类型。变量会根据赋给它的值，自动决定它的类型。你也可以在程序中，改变它的值，于是也就改变了它的类型。例如：
+ </p>
+ <pre class="language-python"><code>a = 1
+print(a, type(a))
+a = 'hello'
+print(a, type(a))
+a = True
+print(a, type(a))</code></pre>
+ <p>
+  输出：
+ </p>
+ <pre class="language-markup"><code>1 &lt;class 'int'&gt;
+hello &lt;class 'str'&gt;
+True &lt;class 'bool'&gt;</code></pre>
+ <p>
+  变量 a 先后成为了整数int、字符串str、bool类型。
+ </p>
+ <p>
+ </p>
+ <p>
+  虽然类型可以随意改变，但当你对一个特定类型的变量进行操作时，如果这个操作与它的数据类型不匹配，就会产生错误。比如以下几行代码
+ </p>
+ <pre class="language-python"><code>print('Hello'+1)
+print('hello%d' % '123')</code></pre>
+ <p>
+ </p>
+ <p>
+  程序运行时会报错。因为第一句里，字符串和整数不能相加；第二句里，%d 需要的是一个整数，而 '123' 是字符串。
+ </p>
+ <p>
+ </p>
+ <p>
+  这种情况下，python提供了一些方法对数值进行类型转换：
+ </p>
+ <ul>
+  <li>
+   int(x)     #把x转换成整数
+  </li>
+  <li>
+   float(x)  #把x转换成浮点数
+  </li>
+  <li>
+   str(x)     #把x转换成字符串
+  </li>
+  <li>
+   bool(x)   #把x转换成bool值
+  </li>
+ </ul>
+ <p>
+ </p>
+ <p>
+  上述两个例子就可以写成：
+ </p>
+ <pre class="language-python"><code>print ('Hello'+str(1))
+print ('hello%d' % int('123'))</code></pre>
+ <p>
+ </p>
+ <p>
+  以下等式的结果均为真：
+ </p>
+ <pre class="language-python"><code>int('123') == 123
+float('3.3') == 3.3
+str(111) == '111'
+bool(0) == False</code></pre>
+ <p>
+ </p>
+ <p>
+  并不是所有的值都能做类型转换，比如 int('abc') 同样会报错，因为 python 没办法把它转成一个整数。
+ </p>
+ <p>
+ </p>
+ <p>
+  另外关于bool类型的转换，我们会专门再详细说明。大家可以先试试以下结果的值，自己摸索一下转换成bool类型的规律：
+ </p>
+ <pre class="language-python"><code>bool(-123)
+bool(0)
+bool('abc')
+bool('False')
+bool('')</code></pre>
+ <p>
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../17">
+     <span aria-hidden="true">
+      ←
+     </span>
+     16.字符串格式化2
+    </a>
+   </li>
+   <li class="next">
+    <a href="../19">
+     18.bool类型转换
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

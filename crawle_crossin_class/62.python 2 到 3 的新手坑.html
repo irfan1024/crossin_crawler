@@ -1,0 +1,161 @@
+62<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第62课】python 2 到 3 的新手坑
+ </h2>
+ <br/>
+ <p>
+  昨天挖了个坑，论坛上已经有不少解答了，还有c语言的版本。今天先不填坑，让题目再飞一会儿，没做的同学可以周末试着写写玩儿。
+ </p>
+ <p>
+ </p>
+ <p>
+  周三的时候去参加“编程一小时”活动，过程中发现，python版本2和版本3之间一些小改动把很多人都给坑了，花了大量的时间在这件事情上。所以今天来讲一下最大的两个坑：print 和 input。
+ </p>
+ <p>
+ </p>
+ <p>
+  <strong>
+   print
+  </strong>
+ </p>
+ <p>
+ </p>
+ <p>
+  我们在课程最开始的时候就讲过 print，在版本2的使用方法是：
+ </p>
+ <pre class="language-python"><code>print 'this is version 2'</code></pre>
+ <p>
+ </p>
+ <p>
+  也可以是
+ </p>
+ <pre class="language-python"><code>print('this is version 2')</code></pre>
+ <p>
+ </p>
+ <p>
+  但到了3，就只能加上括号，像一个函数一样来使用 print：
+ </p>
+ <pre class="language-python"><code>print('this is version 3')</code></pre>
+ <p>
+ </p>
+ <p>
+  假如你看了基于2的教程（比如我写的），然后又装了python 3，可能就会奇怪为什么完全照着写，结果却不一样。
+ </p>
+ <p>
+ </p>
+ <p>
+  另外2里不换行输出是加上逗号：
+ </p>
+ <pre class="language-python"><code>print '*',</code></pre>
+ <p>
+ </p>
+ <p>
+  到了3里就要改成：
+ </p>
+ <pre class="language-python"><code>print('*', end=' ')</code></pre>
+ <p>
+ </p>
+ <p>
+  <strong>
+   input
+  </strong>
+ </p>
+ <p>
+ </p>
+ <p>
+  而 input 就更绕一点。2里面有两个用来从命令行接受输入的函数：input 和 raw_input。
+ </p>
+ <pre class="language-python"><code>value = input()</code></pre>
+ <p>
+ </p>
+ <p>
+  input 接收的是一个值或变量，也就是说，你如果输 123，程序接收到的就是整数 123，你输 True，就是 bool 值 True。如果你输了 abc，程序会认为这是一个叫做 abc 的变量，而假如你没有定义过这个变量，就会报错。
+ </p>
+ <p>
+ </p>
+ <p>
+  所以，当你想用 input 得到一段文字的话，必须把文字写在引号 "" 或 '' 中。
+ </p>
+ <pre class="language-python"><code>text = raw_input()</code></pre>
+ <p>
+ </p>
+ <p>
+  raw_input 接收的则是你输入的字符串，而不管你输的是什么内容。如果你直接拿 raw_input 得到的“数字”去比较大小，则会得到奇怪的结果。
+ </p>
+ <p>
+ </p>
+ <p>
+  在版本3里，为了减少混乱，这两种输入方式被合并了。只是合并的方式又坑了新手：它保留了 input 这个名字和 raw_input 的效果。3里只有input函数，它接收你输入的字符串，不管你输的是什么。
+ </p>
+ <pre class="language-python"><code>text = input()</code></pre>
+ <p>
+ </p>
+ <p>
+  这种情况下，不管你是看着3的教材用2，还是看着2的教材用3，都会踩到这个坑。3里直接拿 input 得到的“数字”比较大小，会报错类型不同无法比较。
+ </p>
+ <p>
+ </p>
+ <p>
+  那么在3里，如何像2一样得到用户输入的一个值呢？方法是 eval()：
+ </p>
+ <pre class="language-python"><code>value = eval(input())</code></pre>
+ <p>
+ </p>
+ <p>
+  或者，如果你只是需要一个整数值，也可以：
+ </p>
+ <pre class="language-python"><code>value = int(input())</code></pre>
+ <p>
+ </p>
+ <p>
+  除了一开始遇到的这两个坑外，还有其他一些可能遇到的变动，这里以3与2相比的差异来说：
+ </p>
+ <p>
+ </p>
+ <ul>
+  <li>
+   打开文件不再支持 file 方法，只能用 open
+  </li>
+  <li>
+   range不再返回列表，而是一个可迭代的range对象
+  </li>
+  <li>
+   除法 / 不再是整除，而是得到浮点数，整除需要用双斜杠 //
+  </li>
+  <li>
+   urllib和urllib2合并成了urllib，常用的urllib2.urlopen()变成了urllib.request.urlopen()
+  </li>
+  <li>
+   字符串及编码相关有大变动，简单来说就是原来的str变成了新的bytes，原来的unicode变成了新的str。具体内容比较多，可以公众号回复
+   <span style="background-color: #ffff00;">
+    编码
+   </span>
+   ，有一篇专门讲3的字符编码问题
+  </li>
+ </ul>
+ <p>
+ </p>
+ <p>
+  变动不止这些，这里仅列出初学者比较常见的几个。更多问题可以给我们留言，或者在 bbs.crossincode.com 上发帖提问，看到后会回复。
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../63">
+     <span aria-hidden="true">
+      ←
+     </span>
+     61.调试程序
+    </a>
+   </li>
+   <li class="next">
+    <a href="../65">
+     63.python shell
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

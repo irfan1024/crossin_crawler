@@ -1,0 +1,102 @@
+44<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第44课】查天气（2）
+ </h2>
+ <br/>
+ <p>
+  今天有些事情耽搁了，课程来得晚了些。
+ </p>
+ <p>
+ </p>
+ <p>
+  先来看python中的requests库，这是一个用来获取网络资源的模块。我们平常上网，在浏览器地址栏中输入一个网址，浏览器根据这个网址拿到一些内容，然后展现在页面上，这大约就是浏览网页的过程。类似的，requests会跟据你提供的网址，请求对应的内容。
+ </p>
+ <p>
+ </p>
+ <p>
+  requests是一个第三方库，它需要下载后安装到python的安装目录下，所以我们首先要做的是下载安装，这些都可以使用pip来进行：
+ </p>
+ <p>
+  pip install requests
+ </p>
+ <p>
+  安装完毕后，我们在代码中：
+ </p>
+ <pre class="language-python"><code>import requests</code></pre>
+ <p>
+  如果没有报错，就说明安装成功了。
+ </p>
+ <p>
+ </p>
+ <p>
+  使用requests库打开一个链接的方法很简单：
+ </p>
+ <pre class="language-python"><code>import requests
+req = requests.get('http://www.baidu.com')
+print(req)
+req.encoding = 'utf8'
+content = req.text
+print(content)</code></pre>
+ <p>
+ </p>
+ <p>
+  我们引入requests的模块，用其中的get方法打开百度，并将结果保存在变量req中，输出req可以看到，返回了一个 Response 和一个数字，其中数字 200 就代表请求成功。
+ </p>
+ <p>
+ </p>
+ <p>
+  要查看访问到的数据，只要访问返回结果的text属性即可。运行后，你会看到控制台中输出了一堆看不懂的代码文字。这段代码中有html，有css，还有javascript。我们在浏览器中看到的网页大部分就是由这些代码所组成。如果你把content保存到一个以“.html”结尾的文件中（保存文件的方法前面已经说过很多），再打开这个html文件，就会看到“百度的首页”，只是这个首页在你的电脑上，所以你无法进行搜索。
+ </p>
+ <p>
+ </p>
+ <p>
+  回到我们的查天气程序，我们首先要获取用户输入，拼接成要请求的 url 地址，并且用requests进行请求。
+ </p>
+ <pre class="language-python"><code>while True:
+    city = input('请输入城市,回车退出:\n')
+    if not city:
+        break
+    req = requests.get('http://wthrcdn.etouch.cn/weather_mini?city=%s' % city)
+    print(req.text)</code></pre>
+ <p>
+ </p>
+ <p>
+  程序使用 while 循环以便重复查询，如果没有输入任何内容，程序会自动退出，用了if判断是否存在 city。
+ </p>
+ <p>
+ </p>
+ <p>
+  运行一下看看能不能得到结果。如果提示编码的错误，试试在文件最开始加上：
+ </p>
+ <pre class="language-python"><code># -*- coding: utf-8 -*-</code></pre>
+ <p>
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/44-0.png" style="width: 100%; height: auto;"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  可以看到，已经拿到了json格式的天气信息。下一课我们再来处理它。
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../44">
+     <span aria-hidden="true">
+      ←
+     </span>
+     43.查天气（1）
+    </a>
+   </li>
+   <li class="next">
+    <a href="../46">
+     45.查天气（3）
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

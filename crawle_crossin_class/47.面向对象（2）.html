@@ -1,0 +1,107 @@
+47<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第47课】面向对象（2）
+ </h2>
+ <br/>
+ <p>
+  昨天介绍了面向对象的概念，今天我们来创建一个类。
+ </p>
+ <pre class="language-python"><code>class MyClass:
+    pass
+
+mc = MyClass()
+print (mc)</code></pre>
+ <p>
+ </p>
+ <p>
+  关键字class加上类名用来创建一个类。之后缩进的代码块是这个类的内部。在这里，我们用pass语句，表示一个空的代码块。
+ </p>
+ <p>
+ </p>
+ <p>
+  类名加圆括号()的形式可以创建一个类的实例，也就是被称作对象的东西。我们把这个对象赋值给变量mc。于是，mc现在就是一个MyClass类的对象。
+ </p>
+ <p>
+ </p>
+ <p>
+  看一下输出结果：
+ </p>
+ <p>
+ </p>
+ <p>
+  &lt;__main__.MyClass instance at 0x7fd1c8d01200&gt;
+ </p>
+ <p>
+ </p>
+ <p>
+  这个意思就是说，mc是__main__模块中MyClass来的一个实例（instance），后面的一串十六进制的数字是这个对象的内存地址。
+ </p>
+ <p>
+ </p>
+ <p>
+  我们给这个类加上一些域：
+ </p>
+ <pre class="language-python"><code>class MyClass:
+    name = 'Sam'
+
+    def sayHi(self):
+        print ('Hello %s' % self.name)
+
+mc = MyClass()
+print (mc.name)
+mc.name = 'Lily'
+mc.sayHi()</code></pre>
+ <p>
+ </p>
+ <p>
+  我们给MyClass类增加了一个类变量name，并把它的值设为'Sam'。然后又增加了一个类方法sayHi。
+ </p>
+ <p>
+ </p>
+ <p>
+  调用类变量的方法是“对象.变量名”。你可以得到它的值，也可以改变它的值。
+ </p>
+ <p>
+ </p>
+ <p>
+  注意到，类方法和我们之前定义的函数区别在于，第一个参数必须为self。而在调用类方法的时候，通过“对象.方法名()”格式进行调用，而不需要额外提供self这个参数的值。self在类方法中的值，就是你调用的这个对象本身。
+ </p>
+ <p>
+ </p>
+ <p>
+  输出结果：
+ </p>
+ <p>
+ </p>
+ <p>
+  Sam
+ </p>
+ <p>
+  Hello Lily
+ </p>
+ <p>
+ </p>
+ <p>
+  之后，在你需要用到MyClass这种类型对象的地方，就可以创建并使用它。
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../48">
+     <span aria-hidden="true">
+      ←
+     </span>
+     46.面向对象（1）
+    </a>
+   </li>
+   <li class="next">
+    <a href="../50">
+     48.面向对象（3）
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

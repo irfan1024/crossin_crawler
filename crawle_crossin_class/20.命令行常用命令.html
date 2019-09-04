@@ -1,0 +1,190 @@
+20<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第20课】命令行常用命令
+ </h2>
+ <br/>
+ <p>
+  今天茬开话题，说一下命令行（Windows下叫“命令提示符”，Mac下叫“终端”）里的常用命令。已经熟悉同学可略过。
+ </p>
+ <p>
+ </p>
+ <p>
+  打开命令行，我们会看到每行前面都有诸如
+ </p>
+ <pre class="language-markup"><code>C:\Documents and Settings\Crossin&gt;</code></pre>
+ <p>
+  或者
+ </p>
+ <pre class="language-markup"><code>MyMacBook:~ crossin$</code></pre>
+ <p>
+  之类的。
+ </p>
+ <p>
+  这个提示符表示了当前命令行所在目录。
+ </p>
+ <p>
+ </p>
+ <p>
+  在这里，我们输入 python 并敲下回车，就可以进入python环境了。但今天我们暂时不这么做。
+ </p>
+ <p>
+ </p>
+ <p>
+  第一个常用的命令是：
+ </p>
+ <p>
+  <strong>
+   dir
+  </strong>
+  <span style="color: #999999;">
+   （windows环境下）
+  </span>
+ </p>
+ <p>
+  <strong>
+   ls
+  </strong>
+  <span style="color: #999999;">
+   （mac环境下）
+  </span>
+ </p>
+ <p>
+ </p>
+ <p>
+  dir 和 ls 的作用差不多，都是显示出当前目录下的文件和文件夹。
+ </p>
+ <p>
+  具体效果可参见文末的附图。
+ </p>
+ <p>
+ </p>
+ <p>
+  第二个常用命令是：
+ </p>
+ <pre class="language-markup"><code>cd 目录名</code></pre>
+ <p>
+ </p>
+ <p>
+  通过 dir 或 ls 了解当前目录的结构之后，可以通过“cd 目录名”的方式，进入到当前目录下的子目录里。
+ </p>
+ <p>
+ </p>
+ <p>
+  如果要跳回到上级目录，可以用命令：
+ </p>
+ <pre class="language-markup"><code>cd ..</code></pre>
+ <p>
+ </p>
+ <p>
+  另外，Windows下如果要写换盘符，需要输入
+ </p>
+ <pre class="language-markup"><code>盘符:</code></pre>
+ <p>
+ </p>
+ <p>
+  比如从c盘切换到d盘
+ </p>
+ <pre class="language-markup"><code>C:\Documents and Settings\Crossin&gt; d:</code></pre>
+ <p>
+ </p>
+ <p>
+  有了以上两个命令，就可以在文件目录的迷宫里游荡了。虽然没可视化的目录下的操作那么直观，但是会显得你更像个程序员。。。
+ </p>
+ <p>
+ </p>
+ <p>
+  于是乎，再说个高阶玩法：现在你可以不用 idle 那套东西了，随便找个顺手的文本软件，把你的代码写好，保存好，最好是保存成 py 文件。
+ </p>
+ <p>
+  然后在命令行下，通过使用 cd 命令进入到 py 文件保存的目录，再执行命令：
+ </p>
+ <pre class="language-markup"><code>python 代码的文件名</code></pre>
+ <p>
+  就可以运行你写的程序了。
+ </p>
+ <p>
+ </p>
+ <p>
+  演示如下：
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/20-0.png" style="width: 80%; height: auto;"/>
+ </p>
+ <p>
+  嗯，这才像个python程序员的样！
+ </p>
+ <p>
+  注意：如果执行 python 命令时提示“不是内部或外部命令”，那么说明你的环境变量没有设置好。请参考
+  <a href="../../../../../cls/lesson/2/" rel="noopener" target="_blank">
+   1.安装
+  </a>
+  课中最后一点
+  <strong>
+   配置命令行
+  </strong>
+  里的几点注意进行检查。
+ </p>
+ <p>
+ </p>
+ <p>
+  其他常用命令，诸如
+  <strong>
+   拷贝文件、删除文件、新建文件夹
+  </strong>
+  之类的，请你自行在网上搜索相关资料。很容易的，比如你搜“mac 终端 常用命令”，就可以找到很多了。
+ </p>
+ <p>
+ </p>
+ <p>
+  #======= 扩展阅读 ========#
+ </p>
+ <p>
+ </p>
+ <p>
+  使用搜索引擎也是程序员的重要技能之一，所以现在你可以练习起来，推荐阅读下
+  <a href="https://zhuanlan.zhihu.com/p/20683456" rel="noopener" target="_blank">
+   编程初学者如何使用搜索引擎
+  </a>
+  。
+ </p>
+ <p>
+ </p>
+ <p>
+  学到这里，很多同学都已经写出来可以完整运行的代码，有了不小的成就感，希望能把程序发给别人运行。然而对方电脑上如果没装python就运行不了了。
+ </p>
+ <p>
+  这里，我提供两篇关于如果把你的 python 程序打包成别人电脑上也可执行的 exe 文件的教程，稍稍有点复杂，想挑战的可以去试试：
+ </p>
+ <ul>
+  <li>
+   <a href="https://bbs.crossincode.com/forum.php?mod=viewthread&amp;tid=5486&amp;extra=page%3d1" rel="noopener" target="_blank">
+    利用cx_Freeze将py文件打包成exe文件（图文全解）
+   </a>
+  </li>
+  <li>
+   <a href="https://mp.weixin.qq.com/s/sfg4aBPf1dZMrCh-sK_myA" rel="noopener" target="_blank">
+    将打飞机游戏打包成 exe
+   </a>
+  </li>
+ </ul>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../20">
+     <span aria-hidden="true">
+      ←
+     </span>
+     19.函数
+    </a>
+   </li>
+   <li class="next">
+    <a href="../22">
+     21.函数的参数
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

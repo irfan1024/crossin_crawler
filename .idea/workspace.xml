@@ -2,83 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e6d5563-e490-4eba-84d6-741086ff0354" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/0.为什么选择 Python 入门？.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/1.安装.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/10.变量2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/11.逻辑判断.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/12.for循环.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/13.字符串.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/14.字符串格式化.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/15.循环的嵌套.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/16.字符串格式化2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/17.类型转换.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/18.bool类型转换.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/19.函数.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/2.print.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/20.命令行常用命令.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/21.函数的参数.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/22.函数应用示例.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/23.if, elif, else.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/24.if的嵌套.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/25.初探list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/26.操作list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/27.list切片.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/28.字符串的分割.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/29.连接list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/3.IDE.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/30.字符串的索引和切片.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/31.读文件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/32.写文件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/33.处理文件中的数据.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/34.break.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/35.continue.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/36.异常处理.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/37.字典.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/38.模块.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/39.用文件保存游戏（1）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/4.输入.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/40.用文件保存游戏（2）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/41.用文件保存游戏（3）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/42.函数的默认参数.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/43.查天气（1）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/44.查天气（2）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/45.查天气（3）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/46.面向对象（1）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/47.面向对象（2）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/48.面向对象（3）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/49.面向对象（4）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/5.变量.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/50.and-or技巧.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/51.元组.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/52.数学运算.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/53.真值表.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/54.正则表达式（1）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/55.正则表达式（2）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/56.正则表达式（3）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/57.正则表达式（4）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/58.正则表达式（5）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/59.随机数.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/6.bool.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/60.计时.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/61.调试程序.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/62.python 2 到 3 的新手坑.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/63.python shell.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/64.列表解析.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/65.函数的参数传递（1）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/66.函数的参数传递（2）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/67.函数的参数传递（3）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/68.lambda 表达式.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/69.变量的作用域.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/7.if.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/70.map 函数.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/71.reduce 函数.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/72.多线程.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/8.while.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/9.random.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawle_crossin_class/Python 入门教程.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crawle_crossin_class/crossin_pdf.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawle_crossin_class/crossin_pdf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/python666.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/crawle_crossin_class/python666.pdf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -385,7 +309,7 @@
       <workItem from="1567514900981" duration="13447000" />
       <workItem from="1567555021848" duration="2172000" />
       <workItem from="1567576556057" duration="6218000" />
-      <workItem from="1567583314478" duration="3843000" />
+      <workItem from="1567583314478" duration="4130000" />
     </task>
     <servers />
   </component>
@@ -420,7 +344,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/crossin_crawler$pdfrun.coverage" NAME="pdfrun Coverage Results" MODIFIED="1567587541740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawle_crossin_class" />
+    <SUITE FILE_PATH="coverage/crossin_crawler$pdfrun.coverage" NAME="pdfrun Coverage Results" MODIFIED="1567587900492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawle_crossin_class" />
     <SUITE FILE_PATH="coverage/crossin_crawler$zhihurun.coverage" NAME="zhihurun Coverage Results" MODIFIED="1567085663948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/crossin_crawler$weather1.coverage" NAME="weather1 Coverage Results" MODIFIED="1566640651317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/crossin_crawler$zhaopinrun.coverage" NAME="zhaopinrun Coverage Results" MODIFIED="1567089803871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

@@ -79,7 +79,6 @@ def htmltopdf(htmls, first_page):
     options = {
         'page-size' : 'A4',
         'encoding' : 'UTF-8',
-        'no-outline' : None,
     }
     cover = first_page
     pdfkit.from_file(htmls, 'python666.pdf', configuration=config, options=options, cover=cover)

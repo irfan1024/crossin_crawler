@@ -1,0 +1,183 @@
+8<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第8课】while
+ </h2>
+ <br/>
+ <p>
+  先介绍一个新东西：
+  <strong>
+   注释
+  </strong>
+ </p>
+ <p>
+  python里，以“#”开头的文字会被忽略，不会被认为是可执行的代码。
+ </p>
+ <pre class="language-python"><code>print ("hello world")</code></pre>
+ <p>
+  和
+ </p>
+ <pre class="language-python"><code>print ("hello world")    #输出一行字</code></pre>
+ <p>
+  是同样的效果。但后者可以帮助开发者更好地理解代码。
+ </p>
+ <p>
+  在接下来的课程中，我会经常用注释来解释代码。
+ </p>
+ <p>
+ </p>
+ <p>
+  #======== 进入今天的正题 ========#
+ </p>
+ <p>
+ </p>
+ <p>
+  用if改进完我们的小游戏后，功能已经基本实现了。很多同学做完后纷纷表示，每次只能猜一次，完了之后又得重新run，感觉好麻烦。能不能有办法让玩家一直猜，直到猜中为止？答案很显然：如果这种小问题都解决不了，那 python 可就弱爆了。
+ </p>
+ <p>
+ </p>
+ <p>
+  最简单的解决方法就是：
+  <strong>
+   while
+  </strong>
+ </p>
+ <p>
+ </p>
+ <p>
+  同 if 一样，whil e也是一种控制流语句，另外它也被称作循环语句。继续来看渣画质手绘流程图：
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/8-0.png" style="width: 40%; height: auto;"/>
+ </p>
+ <p>
+  while，英文翻译过来就是“当...的时候”。
+ </p>
+ <p>
+  程序执行到
+  <strong>
+   while
+  </strong>
+  处，“当”条件为 True 时，就去执行 while 内部的代码；“当”条件为 False 时，就跳过。
+ </p>
+ <p>
+ </p>
+ <p>
+  语法为：
+ </p>
+ <pre class="language-python"><code>while 条件:
+    循环执行的语句</code></pre>
+ <p>
+ </p>
+ <p>
+  同 if 一样，注意冒号，注意缩进。
+ </p>
+ <p>
+ </p>
+ <p>
+  今天的栗子：
+ </p>
+ <pre class="language-python"><code># coding: gbk
+a = 1             # 为了后面的条件能满足，先把a设为1
+while a != 0:     # 如果a不等于0就循环（1不等于0）
+    print("please input")
+    a = int(input())     # 在循环内部获取输入，改变a的值（想想看不改会怎样？）
+print("over")</code></pre>
+ <p>
+ </p>
+ <p>
+  程序执行后，会不断向你询问输入，直到你输入0，条件
+  <strong>
+   a!=0
+  </strong>
+  不满足，循环结束。
+ </p>
+ <p>
+ </p>
+ <p>
+  现在，想想怎么用while改进小游戏？有多种写法，大家自己思考下，我不多做说明了。
+ </p>
+ <p>
+  下图给出一种方法。
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/8-1.png" style="width: 100%; height: auto;"/>
+ </p>
+ <p>
+  解释下：
+ </p>
+ <ol>
+  <li>
+   代码中，我们用了一个叫做 bingo 的变量，来记录是否猜中了结果，猜中了就是 True，没猜中就是 False（bingo本身就是有“赢了”的意思，你也可以命名为 caizhong，这个随意）。
+  </li>
+  <li>
+   一开始，我们给 bingo 赋值为 False，使程序可以进入循环。
+  </li>
+  <li>
+   每次循环中，我们都会输入一遍 answer，然后判断是大是小还是相等。如果相等了，再此条件的代码块里面增加一句 bingo = True，修改 bingo 的值，使得程序在下一次循环判断的时候，发现 bingo == False 这个循环条件不再满足，于是程序结束。
+  </li>
+ </ol>
+ <p>
+  注意：这里出现了两层缩进，要保持每层缩进的空格数相同。
+ </p>
+ <p>
+ </p>
+ <p>
+  到此为止，小游戏已经基本成型了。不过好像还差一点：每次自己都知道答案，这玩起来有神马意思。
+ </p>
+ <p>
+ </p>
+ <p>
+  明天来讲，怎么让你不知道电脑的答案。
+ </p>
+ <p>
+ </p>
+ <p>
+  PS：如果你对本课中的 bingo = False、bingo == False 和 bingo = True 感到困惑，先别着急挠头，我们会在后面
+  <a href="../../../../../cls/lesson/12/" rel="noopener" target="_blank">
+   11.逻辑判断
+  </a>
+  课程中进一步详细解释。
+ </p>
+ <p>
+ </p>
+ <p>
+  #======== 作业练习 ========#
+ </p>
+ <p>
+  你可以在公众号
+  <strong>
+   Crossin的编程教室
+  </strong>
+  中的
+  <strong>
+   课外辅导
+  </strong>
+  栏目里找到一些
+  <a href="http://mp.weixin.qq.com/mp/homepage?__biz=MjM5MDEyMDk4Mw==&amp;hid=3&amp;sn=08af41239ec5d518ac25edb0f9167cc0&amp;scene=18#wechat_redirect" rel="noopener" target="_blank">
+   练习题
+  </a>
+  ，学了 while 之后，你可以试一试完成 3~6 题。
+ </p>
+ <p>
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../8">
+     <span aria-hidden="true">
+      ←
+     </span>
+     7.if
+    </a>
+   </li>
+   <li class="next">
+    <a href="../10">
+     9.random
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

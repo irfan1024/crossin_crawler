@@ -1,0 +1,120 @@
+24<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第24课】if的嵌套
+ </h2>
+ <br/>
+ <p>
+  和 for 循环一样，if 也可以嵌套使用，即在一个 if/elif/else 的内部，再使用 if。这有点类似于电路的串联。
+ </p>
+ <p>
+ </p>
+ <pre class="language-python"><code>if 条件1:
+   if 条件2:
+       语句1
+   else:
+       语句2
+else:
+   if 条件2:
+       语句3
+   else:
+       语句4</code></pre>
+ <p>
+ </p>
+ <p>
+  在上面这个两层if的结构中，当：
+ </p>
+ <p>
+  条件1为True，条件2为True时，
+ </p>
+ <p>
+  执行语句1；
+ </p>
+ <p>
+  条件1为True，条件2为False时，
+ </p>
+ <p>
+  执行语句2；
+ </p>
+ <p>
+  条件1为False，条件2为True时，
+ </p>
+ <p>
+  执行语句3；
+ </p>
+ <p>
+  条件1为False，条件2为False时，
+ </p>
+ <p>
+  执行语句4。
+ </p>
+ <p>
+ </p>
+ <p>
+  假设需要这样一个程序：
+ </p>
+ <p>
+  我们先向程序输入一个值x，再输入一个值y。(x,y)表示一个点的坐标。程序要告诉我们这个点处在坐标系的哪一个象限。
+ </p>
+ <p>
+  x&gt;=0，y&gt;=0，则输出1；
+ </p>
+ <p>
+  x&lt;0，y&gt;=0，则输出2；
+ </p>
+ <p>
+  x&lt;0，y&lt;0，则输出3；
+ </p>
+ <p>
+  x&gt;=0，y&lt;0，则输出4。
+ </p>
+ <p>
+ </p>
+ <p>
+  你可以分别写4个if，也可以用if的嵌套：
+ </p>
+ <pre class="language-python"><code>if y &gt;= 0:
+   if x &gt;= 0:
+       print (1)
+   else:
+       print (2)
+else:
+   if x &lt; 0:
+       print (3)
+   else:
+       print (4)
+
+</code></pre>
+ <p>
+ </p>
+ <p>
+  从流程图上来看，应该是这样。
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/24-0.png" style="width: 70%; height: auto;"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  是否从图中看出了两层 if 结构呢？
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../24">
+     <span aria-hidden="true">
+      ←
+     </span>
+     23.if, elif, else
+    </a>
+   </li>
+   <li class="next">
+    <a href="../26">
+     25.初探list
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

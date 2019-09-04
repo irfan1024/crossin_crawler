@@ -1,0 +1,99 @@
+31<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第31课】读文件
+ </h2>
+ <br/>
+ <p>
+  之前，我们写的程序绝大多数都依赖于从命令行输入。假如某个程序需要输入很多数据，比如一次考试的全班学生成绩，再这么输就略显痛苦了。一个常见的办法就是把学生的成绩都保存在一个文件中，然后让程序自己从这个文件里取数据。
+ </p>
+ <p>
+ </p>
+ <p>
+  要读取文件，先得有文件。我们新建个文件，就叫它data.txt。在里面随便写上一些话，保存。把这个文件放在接下来你打算保存代码的文件夹下，这么做是为了方便我们的程序找到它。准备工作就绪，可以来写我们的代码了。
+ </p>
+ <p>
+ </p>
+ <p>
+  打开一个文件的命令很简单：
+ </p>
+ <pre class="language-python"><code>open('文件名')</code></pre>
+ <p>
+ </p>
+ <p>
+  这里的文件名可以用文件的完整路径，也可以是相对路径。因为我们把要读取的文件和代码放在了同一个文件夹下，所以只需要写它的文件名就够了。
+ </p>
+ <pre class="language-python"><code>f = open('data.txt')</code></pre>
+ <p>
+ </p>
+ <p>
+  但这一步只是打开了一个文件，并没有得到其中的内容。变量f保存了这个文件，还需要去读取它的内容。你可以通过
+  <strong>
+   read()
+  </strong>
+  函数把文件内所有内容读进一个字符串中。
+ </p>
+ <pre class="language-python"><code>data = f.read()</code></pre>
+ <p>
+ </p>
+ <p>
+  做完对文件的操作之后，记得用
+  <strong>
+   close()
+  </strong>
+  关闭文件，释放资源。虽然现在这样一个很短的程序，不做这一步也不会影响运行结果。但养成好习惯，可以避免以后发生莫名的错误。
+ </p>
+ <p>
+  注意：close() 一定要有后面的括号，不然就没有调用这个函数。
+ </p>
+ <p>
+ </p>
+ <p>
+  完整程序示例：
+ </p>
+ <pre class="language-python"><code>f = open('data.txt')
+data = f.read()
+print (data)
+f.close()</code></pre>
+ <p>
+ </p>
+ <p>
+  是不是很简单？
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/31-0.png" style="width: 100%; height: auto;"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  读取文件内容的方法还有
+ </p>
+ <pre class="language-python"><code>readline() #读取一行内容
+readlines() #把内容按行读取至一个list中</code></pre>
+ <p>
+ </p>
+ <p>
+  留给你们的任务：用这两个方法分别去替换例子程序的第二行，看看它们的区别。
+ </p>
+ <p>
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../31">
+     <span aria-hidden="true">
+      ←
+     </span>
+     30.字符串的索引和切片
+    </a>
+   </li>
+   <li class="next">
+    <a href="../33">
+     32.写文件
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

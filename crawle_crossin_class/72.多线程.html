@@ -1,0 +1,164 @@
+72<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第72课】多线程
+ </h2>
+ <br/>
+ <p>
+  很多人使用 python 编写“爬虫”程序，抓取网上的数据。
+ </p>
+ <p>
+ </p>
+ <p>
+  举个例子，通过这个接口：
+ </p>
+ <p>
+  http://wthrcdn.etouch.cn/weather_mini?city=北京
+ </p>
+ <p>
+  查询天气。
+ </p>
+ <p>
+ </p>
+ <p>
+  如果我们想用这套代码同事抓取10个城市的天气，如果一个一个的抓，效率就很低了。
+ </p>
+ <p>
+ </p>
+ <p>
+  然而想一下，我们抓一个城市天气的过程是独立，并不依赖于其他城市的结果。因此没必要排好队一个一个地按顺序来。那么有没有什么办法可以同时抓取好几个城市的天气呢？
+ </p>
+ <p>
+ </p>
+ <p>
+  答案就是：
+  <strong>
+   多线程
+  </strong>
+  。
+ </p>
+ <p>
+ </p>
+ <p>
+  来说一种简单的多线程方法：
+ </p>
+ <p>
+ </p>
+ <p>
+  python 里有一个 threading 模块，其中提供了一个函数：
+ </p>
+ <pre class="language-python"><code>threading.Thread(target=function, args=(), kwargs={})</code></pre>
+ <p>
+  function 是开发者定义的线程函数，
+ </p>
+ <p>
+  args 是传递给线程函数的参数，必须是tuple类型，
+ </p>
+ <p>
+  kwargs 是可选参数，字典类型。
+ </p>
+ <p>
+ </p>
+ <p>
+  调用 threading.Thread 之后，会创建一个新的线程，参数 target 指定线程将要运行的函数，args 和 kwargs 则指定函数的参数来执行 function 函数。
+ </p>
+ <p>
+ </p>
+ <p>
+  改写一下前面的代码，将抓取的部分放在一个函数中：
+ </p>
+ <pre class="language-python"><code>def get_weather(city):
+    req = requests.get('http://wthrcdn.etouch.cn/weather_mini?city=%s' % city)
+    dic_city = req.json()
+
+    city_data = dic_city.get('data')  # 没有’data‘的话返回 []
+    print(city_data.get('city'))
+
+    if city_data:
+        city_forecast = city_data['forecast'][0]  # 下面的都可以换成'get'方法
+        print(city_forecast.get('date'))
+        print(city_forecast.get('high'))
+        print(city_forecast.get('low'))
+        print(city_forecast.get('type'))
+    else:
+        print('未获得')
+    print()</code></pre>
+ <p>
+ </p>
+ <p>
+  之后，程序采用了三个循环，在第一个循环中，针对每一个城市，都创建了一个新线程，并将线程加入到一个列表中，用于之后的启动。
+ </p>
+ <pre class="language-python"><code>threads = []
+cities = ['北京', '南京', '上海', '深圳', '广州', '杭州', '苏州', '天津', '西安', '成都']
+files = range(len(cities))
+for i in files:  # 创建线程
+    t = threading.Thread(target=get_weather, args=(cities[i],))
+    threads.append(t)</code></pre>
+ <p>
+ </p>
+ <p>
+  在第二个循环中，start 正式开启子线程；
+ </p>
+ <pre class="language-python"><code>for i in files:
+    threads[i].start()</code></pre>
+ <p>
+ </p>
+ <p>
+  在第三个循环中，join 用来同步数据，主线程运行到这一步，将会停下来等待子线程运行完毕。没有这句，主线程则会忽略子线程，运行完自己的代码后结束程序。
+ </p>
+ <pre class="language-python"><code>for i in files:
+    threads[i].join()</code></pre>
+ <p>
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/72-0.png" style="width: 100%; height: auto;"/>
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/72-1.png" style="width: 50%; height: auto;"/>
+ </p>
+ <p>
+  从输出结果可以看出：
+ </p>
+ <ul>
+  <li>
+   在程序刚开始运行时，已经发送所有请求
+  </li>
+  <li>
+   收到的请求并不是按发送顺序，先收到就先显示
+  </li>
+  <li>
+   同样记录了所有10个城市的天气
+  </li>
+ </ul>
+ <p>
+ </p>
+ <p>
+  所以，对于这种耗时长，但又独立的任务，使用多线程可以大大提高运行效率。但在代码层面，可能额外需要做一些处理，保证结果正确。如上例中，如果需要按输入列表城市顺序进行输出，就要另行排序。
+ </p>
+ <p>
+ </p>
+ <p>
+  多线程通常会用在网络收发数据、文件读写、用户交互等待之类的操作上，以避免程序阻塞，提升用户体验或提高执行效率。
+ </p>
+ <p>
+ </p>
+ <p>
+  多线程的实现方法不止这一种。另外多线程也会带来一些单线程程序中不会出现的问题。这里只是简单地开个头。
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../73">
+     <span aria-hidden="true">
+      ←
+     </span>
+     71.reduce 函数
+    </a>
+   </li>
+   <li class="next">
+    <a href="../list">
+     返回首页
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

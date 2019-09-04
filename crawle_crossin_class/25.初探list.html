@@ -1,0 +1,157 @@
+25<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第25课】初探list
+ </h2>
+ <br/>
+ <p>
+  今天要说一个新概念：list，中文可以翻译成列表，是用来处理一组有序项目的数据结构。想象一下你的购物清单、待办工作、手机通讯录等等，它们都可以看作是一个列表。说它是新概念也不算确切，因为我们之前已经用过它，就在这个语句里：
+ </p>
+ <pre class="language-python"><code>for i in range(1, 10):
+    print(i)
+    #此处略过数行代码</code></pre>
+ <p>
+ </p>
+ <p>
+  看出来list在哪里了吗？你试一下：
+ </p>
+ <pre class="language-python"><code>print(list(range(1,10)))</code></pre>
+ <p>
+ </p>
+ <p>
+  得到的结果是：
+ </p>
+ <pre class="language-python"><code>[1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
+ <p>
+ </p>
+ <p>
+  这样一个中括号中的序列就是 list（列表）。虽然在py3，range的结果并不完全等同于list（这个我们以后再讨论），需要额外转换一下，但你暂时可把它当做list来理解。
+ </p>
+ <p>
+ </p>
+ <p>
+  把上面那个for循环语句写成：
+ </p>
+ <pre class="language-python"><code>l = range(1, 10)
+for i in l:
+    print(i)
+    #此处略过数行代码</code></pre>
+ <p>
+  效果是一样的。
+ </p>
+ <p>
+ </p>
+ <p>
+  于是可以看出，for循环做的事情其实就是遍历一个列表中的每一项，每次循环都把当前项赋值给一个变量（这里是i），直到列表结束。
+ </p>
+ <p>
+ </p>
+ <p>
+  我们也可以定义自己的列表，格式就是用
+  <strong>
+   中括号
+  </strong>
+  包围、
+  <strong>
+   逗号
+  </strong>
+  隔开的一组数值：
+ </p>
+ <pre class="language-python"><code>l = [1, 1, 2, 3, 5, 8, 13]</code></pre>
+ <p>
+ </p>
+ <p>
+  可以用print输出这个列表：
+ </p>
+ <pre class="language-python"><code>print(l)</code></pre>
+ <p>
+ </p>
+ <p>
+  同样也可以用for...in遍历这个列表，依次输出了列表中的每一项：
+ </p>
+ <pre class="language-python"><code>for i in l:
+    print(i)</code></pre>
+ <p>
+ </p>
+ <p>
+  列表中的元素也可以是别的类型，比如：
+ </p>
+ <pre class="language-python"><code>l = ['meat', 'egg', 'fish', 'milk']</code></pre>
+ <p>
+ </p>
+ <p>
+  甚至是不同类型的混合：
+ </p>
+ <pre class="language-python"><code>l = [365, 'everyday', 0.618, True]</code></pre>
+ <p>
+ </p>
+ <p>
+  l 身为一个列表，有一些特有的功能，这个我们下回再说。
+ </p>
+ <p>
+ </p>
+ <p>
+  注意：我们这里的例子里用的变量名是小写字母 l，不是大学字母 I。你也可以用其他的名字命名变量，但请不要用 list 本身，因为它已经用来表示列表类型，如果再给它赋值，会导致原本的功能被覆盖，很可能带来问题。
+ </p>
+ <p>
+ </p>
+ <p>
+  #==== 点球小游戏 ====#
+ </p>
+ <p>
+ </p>
+ <p>
+  待会儿要去现场看场中超比赛。于是想到，以我们现在所学的，可以做一个罚点球的游戏。大概流程是这样：
+ </p>
+ <p style="padding-left: 40px;">
+  <em>
+   每一轮，你先输入一个方向射门，然后电脑随机判断一个方向扑救。方向不同则算进球得分，方向相同算扑救成功，不得分。
+  </em>
+ </p>
+ <p style="padding-left: 40px;">
+  <em>
+   之后攻守轮换，你选择一个方向扑救，电脑随机方向射门。
+  </em>
+ </p>
+ <p style="padding-left: 40px;">
+  <em>
+   第5轮结束之后，如果得分不同，比赛结束。
+  </em>
+ </p>
+ <p style="padding-left: 40px;">
+  <em>
+   5轮之内，如果一方即使踢进剩下所有球，也无法达到另一方当前得分，比赛结束。
+  </em>
+ </p>
+ <p style="padding-left: 40px;">
+  <em>
+   5论之后平分，比赛继续进行，直到某一轮分出胜负。
+  </em>
+ </p>
+ <p>
+ </p>
+ <p>
+  你先想想怎么写，能不能自己搞定。过两天我再来说我的做法。
+ </p>
+ <p>
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../25">
+     <span aria-hidden="true">
+      ←
+     </span>
+     24.if的嵌套
+    </a>
+   </li>
+   <li class="next">
+    <a href="../27">
+     26.操作list
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

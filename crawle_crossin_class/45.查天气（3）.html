@@ -1,0 +1,129 @@
+45<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第45课】查天气（3）
+ </h2>
+ <br/>
+ <p>
+  看一下我们通过 req.text 已经拿到的json格式的天气数据：
+ </p>
+ <p>
+ </p>
+ <p>
+  {
+ </p>
+ <p>
+  "data":{
+ </p>
+ <p>
+  "yesterday":{"date":"30日星期二",...,
+ </p>
+ <p>
+  "city":"北京",
+ </p>
+ <p>
+  "forecast":[{"date":"31日星期三",...,
+ </p>
+ <p>
+  "ganmao":"各项气象条件适宜...",
+ </p>
+ <p>
+  "wendu":"30"
+ </p>
+ <p>
+  },
+ </p>
+ <p>
+  "status":1000,
+ </p>
+ <p>
+  "desc":"OK"
+ </p>
+ <p>
+  }
+ </p>
+ <p>
+ </p>
+ <p>
+  直接在命令行中看到的应该是没有换行和空格的一长串字符，这里我把格式整理了一下，并省略了部分信息。可以看出，它像是一个字典的结构，但是有很多层。最外层有三个key--"data"，"status"和"desc"，data的value是另一个字典，里面包含了"yesterday"和"forecast"等好几项天气信息，现在我们最关心的就是"forecast"值列中的第一项。
+ </p>
+ <p>
+ </p>
+ <p>
+  虽然看上去像字典，但它对于程序来说，仍然是一个字符串，只不过是一个满足json格式的字符串。我们可以直接用requests模块的json()方法，将请求得到的json格式的字符串直接转成一个真正的字典。
+ </p>
+ <pre class="language-python"><code>dic_city = req.json()
+print(dic_city)</code></pre>
+ <p>
+  可以看到，与直接输出req.text不同，requests的json()方法不仅帮我们把json格式的数据转化成了字典，还一并帮我们把编码的问题解决了。
+ </p>
+ <p>
+  {'data': {'yesterday': {'date': '30日星期二', 'high': '高温 34℃', 'fx': '南风', 'low': '低温 24℃', 'fl': '&lt;![CDATA[&lt;3级]]&gt;', 'type': ...
+ </p>
+ <p>
+ </p>
+ <p>
+  你可能会觉得json格式的字符串和字典是一样的，但如果你用type方法看一下它们的类型：
+ </p>
+ <pre class="language-python"><code>print (type(req.text))
+print (type(req.json()))</code></pre>
+ <p>
+  就知道区别在哪里了。
+ </p>
+ <p>
+ </p>
+ <p>
+  之后的事情就比较容易了。首先使用字典的get方法，若城市名错误返回的字典中没有’data‘这个键，程序不会报错，而是返回 None
+ </p>
+ <pre class="language-python"><code>city_data = dic_city.get('data')</code></pre>
+ <p>
+ </p>
+ <p>
+  接着，分别输出查询城市当天的日期、最高温、最低温和天气类型，或者进行没有找到城市时的处理：
+ </p>
+ <pre class="language-python"><code>if city_data:
+    city_forecast = city_data['forecast'][0] # 下面的都可以换成'get'方法
+    print(city_forecast.get('date'))
+    print(city_forecast.get('high'))
+    print(city_forecast.get('low'))
+    print(city_forecast.get('type'))
+else:
+    print('未获得')</code></pre>
+ <p>
+ </p>
+ <p>
+  另外，为了防止在请求过程中出错，我加上了一个异常处理。
+ </p>
+ <pre class="language-python"><code>try:
+   ###
+   ###
+except:
+   print ('查询失败')</code></pre>
+ <p>
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/45-0.png" style="width: 100%; height: auto;"/>
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/45-1.png" style="width: 100%; height: auto;"/>
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../45">
+     <span aria-hidden="true">
+      ←
+     </span>
+     44.查天气（2）
+    </a>
+   </li>
+   <li class="next">
+    <a href="../48">
+     46.面向对象（1）
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

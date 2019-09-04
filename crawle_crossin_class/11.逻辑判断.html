@@ -1,0 +1,125 @@
+11<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第11课】逻辑判断
+ </h2>
+ <br/>
+ <p>
+  之前粗略地提到
+  <strong>
+   bool 类型
+  </strong>
+  的变量，又说到 if 和 while 的判断条件。有些同学反馈说没怎么理解，为什么一会儿是 bingo=False，一会又是 bingo==False，一会儿是 while 在条件为 True 的时候执行，一会儿又是 while 在 bingo==False 的时候执行。别急，你听我说。
+ </p>
+ <p>
+ </p>
+ <p>
+  首先，要理解，一个逻辑表达式，其实最终是代表了一个bool类型的结果，比如：
+ </p>
+ <pre class="language-python"><code>1 &lt; 3</code></pre>
+ <p>
+  这个就像当于是一个True的值
+ </p>
+ <p>
+ </p>
+ <pre class="language-python"><code>2 == 3</code></pre>
+ <p>
+  这个就是False
+ </p>
+ <p>
+ </p>
+ <p>
+  把它们作为判断条件放到 if 或者 while 的后面，就是根据他们的值来决定要不要执行。
+ </p>
+ <p>
+ </p>
+ <p>
+  同样的栗子再来几颗：
+ </p>
+ <pre class="language-python"><code>a = 1
+print(a&gt;3)  #False
+print(a==2-1)  #True
+b = 3
+print(a+b==2+2)  #True</code></pre>
+ <p>
+ </p>
+ <p>
+  比较容易搞混的，是bool变量的值和一个逻辑表达式的值，比如：
+ </p>
+ <pre class="language-python"><code>a = False
+print(a)  #False
+print(a==False)  #True</code></pre>
+ <p>
+ </p>
+ <p>
+  虽然 a 本身的值是 False，但是 a==False 这个表达式的值是True。（说人话！）“a”是错的，但“a是错的”这句话是对的。
+ </p>
+ <p>
+ </p>
+ <p>
+  回到上面那几个概念：
+ </p>
+ <pre class="language-python"><code>bingo=False</code></pre>
+ <p>
+  把bingo设为一个值为False的变量
+ </p>
+ <p>
+ </p>
+ <pre class="language-python"><code>bingo==False</code></pre>
+ <p>
+  判断bingo的值是不是False，如果是，那么这句话就是True
+ </p>
+ <p>
+ </p>
+ <p>
+  while 在判断条件条件为 True 时执行循环，所以当 bingo==False 时，条件为 True，循环是要执行的。
+ </p>
+ <p>
+ </p>
+ <p>
+  晕了没？谁刚学谁都晕。不晕的属于骨骼惊奇百年一遇的编程奇才，还不赶紧转行做程序员！
+ </p>
+ <p>
+ </p>
+ <p>
+  逻辑这东西是初学编程的一大坑，我们后面还要在这个坑里挣扎很久。
+ </p>
+ <p>
+ </p>
+ <p>
+  留个习题：
+ </p>
+ <pre class="language-python"><code>a = True
+b = not a  # 不记得not请回顾 6.bool</code></pre>
+ <p>
+  想想下面这些逻辑运算的结果，然后用 print 输出看看你想的对不对：
+ </p>
+ <pre class="language-python"><code>b
+not b
+a == b
+a != b
+a and b
+a or b
+1&lt;2 and b==True</code></pre>
+ <p>
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../11">
+     <span aria-hidden="true">
+      ←
+     </span>
+     10.变量2
+    </a>
+   </li>
+   <li class="next">
+    <a href="../13">
+     12.for循环
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

@@ -1,0 +1,287 @@
+6<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第6课】bool
+ </h2>
+ <br/>
+ <p>
+  昨天说到了python中的几个基本类型，字符串、整数、浮点数都还算好理解，关于剩下的那个
+  <strong>
+   bool（布尔值）
+  </strong>
+  我要稍微多说几句。
+ </p>
+ <p>
+ </p>
+ <p>
+  <strong>
+   逻辑判断
+  </strong>
+  在编程中是非常重要的。大量的复杂程序在根本上都是建立在“
+  <strong>
+   真
+  </strong>
+  ”与“
+  <strong>
+   假
+  </strong>
+  ”的基本逻辑之上。而 bool 所表示的就是这种最单纯最本质的
+  <strong>
+   True/False
+  </strong>
+  ，真与假，是与非。
+ </p>
+ <p>
+ </p>
+ <p>
+  来看下面的例子：
+ </p>
+ <pre class="language-python"><code>a = 1 &lt; 3
+print(a)
+b = 1
+c = 3
+print(b &gt; c)</code></pre>
+ <p>
+ </p>
+ <p>
+  通过用“
+  <strong>
+   &gt;
+  </strong>
+  ”“
+  <strong>
+   &lt;
+  </strong>
+  ”来比较两个数值，我们就得到了一个bool值。这个bool值的真假取决于比较的结果。
+ </p>
+ <p>
+ </p>
+ <p>
+  “&gt;”“&lt;”在编程语言中被称为
+  <strong>
+   比较运算符
+  </strong>
+  （或叫 关系运算符），常用的比较运算符包括：
+ </p>
+ <table border="1" style="border-collapse: collapse; width: 100%; height: 108px;">
+  <tbody>
+   <tr style="height: 18px;">
+    <td style="width: 17.4818%; height: 18px;">
+     &gt;
+    </td>
+    <td style="width: 82.5182%; height: 18px;">
+     大于
+    </td>
+   </tr>
+   <tr style="height: 18px;">
+    <td style="width: 17.4818%; height: 18px;">
+     &lt;
+    </td>
+    <td style="width: 82.5182%; height: 18px;">
+     小于
+    </td>
+   </tr>
+   <tr style="height: 18px;">
+    <td style="width: 17.4818%; height: 18px;">
+     &gt;=
+    </td>
+    <td style="width: 82.5182%; height: 18px;">
+     大于等于
+    </td>
+   </tr>
+   <tr style="height: 18px;">
+    <td style="width: 17.4818%; height: 18px;">
+     &lt;=
+    </td>
+    <td style="width: 82.5182%; height: 18px;">
+     小于等于
+    </td>
+   </tr>
+   <tr style="height: 18px;">
+    <td style="width: 17.4818%; height: 18px;">
+     ==
+    </td>
+    <td style="width: 82.5182%; height: 18px;">
+     等于（比较两个值是否相等。之所以用两个等号，是为了和变量赋值区分开来）
+    </td>
+   </tr>
+   <tr style="height: 18px;">
+    <td style="width: 17.4818%; height: 18px;">
+     !=
+    </td>
+    <td style="width: 82.5182%; height: 18px;">
+     不等于
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  还有一种
+  <strong>
+   逻辑运算符
+  </strong>
+  ：
+ </p>
+ <table border="1" style="border-collapse: collapse; width: 100%;">
+  <tbody>
+   <tr>
+    <td style="width: 18.1159%;">
+     not
+    </td>
+    <td style="width: 35.5072%;">
+     逻辑“
+     <strong>
+      非
+     </strong>
+     ”
+    </td>
+    <td style="width: 46.3768%;">
+     如果 x 为 True，则 not x 为 False
+    </td>
+   </tr>
+   <tr>
+    <td style="width: 18.1159%;">
+     and
+    </td>
+    <td style="width: 35.5072%;">
+     逻辑“
+     <strong>
+      与
+     </strong>
+     ”
+    </td>
+    <td style="width: 46.3768%;">
+     如果 x 为 True，且 y 为 True，则 x and y 为 True
+    </td>
+   </tr>
+   <tr>
+    <td style="width: 18.1159%;">
+     or
+    </td>
+    <td style="width: 35.5072%;">
+     逻辑“
+     <strong>
+      或
+     </strong>
+     ”
+    </td>
+    <td style="width: 46.3768%;">
+     如果 x、y 中至少有一个为 True，则 x or y 为 True
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+ </p>
+ <p>
+  比较运算符和逻辑运算符的结果都是 bool 类型的值。
+ </p>
+ <p>
+ </p>
+ <p>
+  关于bool值和逻辑运算其实远不止这些，但现在我们暂时不去考虑那么多，以免被绕得找不到北。最基本的
+  <strong>
+   大于、小于、等于
+  </strong>
+  已经够我们先用一用的了。
+ </p>
+ <p>
+ </p>
+ <p>
+  试试把bool加到我们的小游戏里：
+ </p>
+ <pre class="language-python"><code>num = 10
+print('Guess what I think?')
+answer = int(input())
+
+result = answer&lt;num
+print('too small?')
+print(result)
+
+result = answer&gt;num
+print('too big?')
+print(result)
+
+result = answer==num
+print('equal?')
+print(result)</code></pre>
+ <p>
+ </p>
+ <p>
+  代码比之前稍微多了一点，解释一下。
+ </p>
+ <p>
+  第一段代码：先创建一个值为10的变量 num，输出一句提示，然后再输入一个值给变量 answer。（因为input拿到的值是字符串而不是数字，这里我们需要将input的结果强行转成整数类型int）
+ </p>
+ <p>
+  第二段代码：计算 answer&lt;num 的结果，记录在 result 里，输出提示，再输出结果。
+ </p>
+ <p>
+  第三段、第四段都与第二段类似，只是比较的内容不一样。
+ </p>
+ <p>
+  注意：当你自己写这段代码的时候，要确保不要有笔误，比如拼错单词，漏掉等号、引号、括号……。（这种情况在新手身上屡有发生）
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/6-0.png" style="width: 100%; height: auto;"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  看看结果是不是跟你预期的一致？虽然看上去还是有点傻，但是离目标又进了一步。（这里不管正确与否，三个答案都会被输出。如果你只要它输出正确的那一个结果，学到后面课程就知道了）
+ </p>
+ <p>
+ </p>
+ <p>
+  现在数数你手上的工具：
+  <strong>
+   输入
+  </strong>
+  、
+  <strong>
+   输出
+  </strong>
+  ，用来记录数值的
+  <strong>
+   变量
+  </strong>
+  ，还有可以比较数值大小的
+  <strong>
+   逻辑运算
+  </strong>
+  。用它们在你的python里折腾一番吧。
+ </p>
+ <p>
+ </p>
+ <p>
+  #======== 课外的话 ========#
+ </p>
+ <p>
+ </p>
+ <p>
+  闲扯还是要的。有同学问，为什么这个语言要叫python。这个嘛，它肯定不是我起的。python，读作“派森”（差不多啦），中文意思“巨蟒”。其实是一个喜剧团体用了“Monty Python”这个名字，而python的创造者（Guido van Rossum 老爷子）又是他们的电视节目《Monty Python and the Flying Circus》（巨蟒飞行马戏团）的粉丝。当他还在自娱自乐地折腾python的雏形时，就拿来命了名。所以，你要是发明了一种语言，也可以命名个 GoT、TBBT、zhenhuan 之类的。
+ </p>
+ <p>
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../6">
+     <span aria-hidden="true">
+      ←
+     </span>
+     5.变量
+    </a>
+   </li>
+   <li class="next">
+    <a href="../8">
+     7.if
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

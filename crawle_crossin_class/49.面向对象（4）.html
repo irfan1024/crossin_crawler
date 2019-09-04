@@ -1,0 +1,115 @@
+49<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第49课】面向对象（4）
+ </h2>
+ <br/>
+ <p>
+  上一课举了一个面向对象和面向过程相比较的例子之后，有些同学表示，仍然没太看出面向对象的优势。没关系，那是因为我们现在接触的程序还不够复杂，等以后你写的程序越来越大，就能体会到这其中的差别了。
+ </p>
+ <p>
+ </p>
+ <p>
+  今天我们就来举一个稍稍再复杂一点的例子。
+ </p>
+ <p>
+ </p>
+ <p>
+  仍然是从A地到B地，这次除了有汽车，我们还有了一辆自行车！
+ </p>
+ <p>
+  自行车和汽车有着相同的属性：速度（speed）。还有一个相同的方法（drive），来输出行驶/骑行一段距离所花的时间。但这次我们要给汽车增加一个属性：每公里油耗（fuel）。而在汽车行驶一段距离的方法中，除了要输出所花的时间外，还要输出所需的油量。
+ </p>
+ <p>
+ </p>
+ <p>
+  面向过程的方法，你可能需要写两个函数，然后把数据作为参数传递进去，在调用的时候要搞清应该使用哪个函数和哪些数据。有了面向对象，你可以把相关的数据和方法封装在一起，并且可以把不同类中的相同功能整合起来。这就需要用到面向对象中的另一个重要概念：继承。
+ </p>
+ <p>
+ </p>
+ <p>
+  我们要使用的方法是，创建一个叫做Vehicle的类，表示某种车，它包含了汽车和自行车所共有的东西：速度，行驶的方法。然后让Car类和Bike类都继承这个Vehicle类，即作为它的子类。在每个子类中，可以分别添加各自独有的属性。
+ </p>
+ <p>
+ </p>
+ <p>
+  Vehicle类被称为基本类或超类，Car类和Bike类被成为导出类或子类。
+ </p>
+ <p>
+ </p>
+ <pre class="language-python"><code>class Vehicle:
+    def __init__(self, speed):
+        self.speed = speed
+        
+    def drive(self, distance):
+        print ('need %f hour(s)' % (distance / self.speed))
+        
+class Bike(Vehicle):
+    pass
+    
+class Car(Vehicle):
+    def __init__(self, speed, fuel):
+        Vehicle.__init__(self, speed)
+        self.fuel = fuel
+        
+    def drive(self, distance):
+        Vehicle.drive(self, distance)
+        print ('need %f fuels' % (distance * self.fuel))
+
+b = Bike(15.0)
+c = Car(80.0, 0.012)
+b.drive(100.0)
+c.drive(100.0)</code></pre>
+ <p>
+ </p>
+ <p>
+  解释一下代码：
+ </p>
+ <p>
+  __init__函数会在类被创建的时候自动调用，用来初始化类。它的参数，要在创建类的时候提供。于是我们通过提供一个数值来初始化speed的值。
+ </p>
+ <p>
+ </p>
+ <p>
+  注意：__init__是python的内置方法，类似的函数名前后是两个下英文划线，如果写错了，则不会起到原本应有的作用。
+ </p>
+ <p>
+ </p>
+ <p>
+  class定义后面的括号里表示这个类继承于哪个类。Bike(Vehicle)就是说Bike是继承自Vehicle中的子类。Vehicle中的属性和方法，Bike都会有。因为Bike不需要有额外的功能，所以用pass在类中保留空块，什么都不用写。
+ </p>
+ <p>
+ </p>
+ <p>
+  Car类中，我们又重新定义了__init__和drive函数，这样会覆盖掉它继承自Vehicle的同名函数。但我们依然可以通过“Vehicle.函数名”来调用它的超类方法。以此来获得它作为Vehicle所具有的功能。注意，因为是通过类名调用方法，而不是像之前一样通过对象来调用，所以这里必须提供self的参数值。在调用超类的方法之后，我们又给Car增加了一个fuel属性，并且在drive中多输出一行信息。
+ </p>
+ <p>
+ </p>
+ <p>
+  最后，我们分别创建一个速度为15的自行车对象，和一个速度为80、耗油量为0.012的汽车，然后让它们去行驶100的距离。
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/50-0.png" style="width: 100%; height: auto;"/>
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../50">
+     <span aria-hidden="true">
+      ←
+     </span>
+     48.面向对象（3）
+    </a>
+   </li>
+   <li class="next">
+    <a href="../52">
+     50.and-or技巧
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

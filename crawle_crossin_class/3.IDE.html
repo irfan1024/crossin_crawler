@@ -1,0 +1,212 @@
+3<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第3课】IDE
+ </h2>
+ <br/>
+ <p>
+  什么是
+  <strong>
+   IDE
+  </strong>
+  ？英文叫做
+  <strong>
+   Integrated Development Environment
+  </strong>
+  ，中文就是
+  <strong>
+   集成开发环境
+  </strong>
+  。嗯，等于没说。
+ </p>
+ <p>
+ </p>
+ <p>
+  说人话：打个不恰当的比方，如果说写代码是制作一件工艺品，那IDE就是机床。再打个不恰当的比方，PS就是图片的IDE，Word就是doc文档的IDE，PowerPoint就是ppt文件的IDE。python也有自己的IDE，而且还有很多。
+ </p>
+ <p>
+ </p>
+ <p>
+  python自带了一款IDE，就是我们一开始介绍过的
+  <strong>
+   IDLE
+  </strong>
+  。Windows上安装 python 了之后，可以在“开始菜单”-&gt;“程序”-&gt;“Python 3.7”里找到它（或者直接搜索 idle）。
+ </p>
+ <p>
+  不知道各位同学注意到没有，在这个默认的窗口里，三个箭头 &gt;&gt;&gt; 后面写代码，输一行代码敲回车就会返回结果，没法换行；而且之前 print 了那么多，关掉之后也不知道到哪里去了，重新打开就都没有了。
+ </p>
+ <p>
+  所以它没法满足我们编写弱智小游戏的大计划。我们需要用新的方法！
+ </p>
+ <p>
+ </p>
+ <p>
+  <strong>
+   如何新建一个文件
+  </strong>
+ </p>
+ <p>
+ </p>
+ <p>
+  点击窗口上方菜单栏的“
+  <strong>
+   File
+  </strong>
+  ”-&gt;“
+  <strong>
+   New File
+  </strong>
+  ”（有些版本是“New Window”），会打一个长得很像的新窗口，但里面什么也没有。这是一个文本编辑器，在这里面就可以写我们的python程序了。在里面写上几行 print 代码，这次可以多 print 一点：
+ </p>
+ <pre class="language-python"><code>print('Hello')
+print('IDE')
+print('Here I am.')</code></pre>
+ <p>
+  <strong>
+   注意1：
+  </strong>
+  ①用英文符号②别忘了括号
+ </p>
+ <p>
+  现在是，见证奇迹的时刻！点击菜单栏de“
+  <strong>
+   Run
+  </strong>
+  ”-&gt;“
+  <strong>
+   Run Module
+  </strong>
+  ”，或者直接按快捷键F5。会提示你保存刚才文件，随便取个名字，比如“lesson3.py”。（.py是python代码文件的类型，虽然不指定.py也是可以的，但建议还按规范来）保存完毕后，之前那个控制台窗口里就会一次性输出你要的结果。
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/3-0.png" style="width: 100%; height: auto;"/>
+ </p>
+ <p>
+  以后想再次编辑或运行刚才的代码，只要在IDLE里选择“
+  <strong>
+   File
+  </strong>
+  ”-&gt;“
+  <strong>
+   Open...
+  </strong>
+  ”，打开刚才保存的.py文件就可以了。
+ </p>
+ <p>
+ </p>
+ <p>
+  <strong>
+   注意2
+  </strong>
+  ：之后我们写多行代码时，一定要通过新建的代码文件，写好后保存运行。否则直接打开IDLE的环境是无法写多行代码的。
+ </p>
+ <p>
+  <strong>
+   注意3
+  </strong>
+  ：一开始请不要在代码里写中文，可能会导致无法保存。如果一定要写的话，需要在文件一开始加上一行内容：
+ </p>
+ <pre class="language-python"><code># coding: gbk</code></pre>
+ <p>
+ </p>
+ <p>
+  Mac上的IDLE是预装好的，在“
+  <strong>
+   终端
+  </strong>
+  ”里输入“
+  <strong>
+   IDLE
+  </strong>
+  ”就可以启动，使用方法同Windows。也可以在文件夹
+  <strong>
+   /usr/bin
+  </strong>
+  里可以找到IDLE。如果是重新下载安装了python，有些版本是可以在“应用程序”里找到IDLE的（一个小火箭图标）。（有同学反馈说他用的 Mac 上默认的 Python 版本里是不带 IDLE 的，需要自行下载安装 Python 后里面才有，那请参考
+  <a href="../../../../../cls/lesson/2/">
+   安装
+  </a>
+  课程里的方法下载安装。）
+ </p>
+ <p>
+ </p>
+ <p>
+  除了官配的 IDLE，还有一些很好用的第三方 IDE，把文件管理、文本编辑器、命令行都整合到了一起，还增加了很多辅助功能比如代码提示、自动补全和跳转等，配置好之后用起来比 IDLE 更爽。这其中首推
+  <strong>
+   PyCharm
+  </strong>
+  ，它之前是收费软件，现在已经推出了免费版本，足够一般的学习和开发使用。有兴趣的同学也可以去找来试试看。在公众号里回复关键字
+  <span style="background-color: #ffff99;">
+   <strong>
+    pycharm
+   </strong>
+  </span>
+  ，可以看到之前写过的相关介绍文章。
+ </p>
+ <p>
+ </p>
+ <p>
+  今天的内容有点长。配置开发环境这种事最麻烦了，也是自学时候劝退率最高的环节，大家耐心一点，毕竟一次投入，长期受益。以后我们的课程都会在IDE中进行。
+ </p>
+ <p>
+ </p>
+ <p>
+  最后说下，有一些python程序员不使用任何IDE。至于原因嘛，可能就像优秀的手工艺人是不会用机床来加工艺术品的吧。
+ </p>
+ <p>
+ </p>
+ <p>
+  #======== 课外的话 ========#
+ </p>
+ <p>
+ </p>
+ <p>
+  昨天的课发出去之后，有不少同学发来了反馈，有完成截屏的，也有遇到问题的。一些问题突然让我意识到，很多地方自己描述得不是很到位，会产生歧义，或者干脆就很难听懂。比如：Mac上有控制台（console）和终端（Terminal）之分。我想说的其实是终端。Mac的同学们请注意。
+ </p>
+ <p>
+ </p>
+ <p>
+  另外，前面的课程我们是在Python命令行（有&gt;&gt;&gt;的环境下）运行，我在文章里面的例子是在命令行里一行一行的输入得到的效果，有同学误以为全都是输入，一起贴到在线编辑器里，结果就报错得不到结果。
+ </p>
+ <p>
+ </p>
+ <p>
+  因此在这里，我特别要申明一下：如果你发现照我说的去做，没有得到预期的结果，那多半是我没说清。千万不要觉得为什么编程这么难，搞了半天也不对。导致错误的原因，往往只是一点点小偏差，稍微改一下就好了。（顺便提一句，今天下午我工作的时候就因为一个单词拼错了，折腾了半天代码）
+ </p>
+ <p>
+ </p>
+ <p>
+  所以嘛，有问题不要一直自己闷着头纠结，多沟通一下就好了。人生中的事情，大抵如此，做人嘛，最重要的是要开心啦……咳咳。
+ </p>
+ <p>
+ </p>
+ <p>
+  另外，为了让大家更好地回顾讲过的内容，以及有问题时候方便讨论交流，我建了一个论坛：
+  <a href="bbs.crossincode.com" rel="noopener" target="_blank">
+   bbs.crossincode.com
+  </a>
+  ，你们可以在论坛相关的帖子下讨论课程内容，或者单独发帖提问。
+ </p>
+ <p>
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../3">
+     <span aria-hidden="true">
+      ←
+     </span>
+     2.print
+    </a>
+   </li>
+   <li class="next">
+    <a href="../5">
+     4.输入
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

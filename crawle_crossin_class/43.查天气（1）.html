@@ -1,0 +1,79 @@
+43<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第43课】查天气（1）
+ </h2>
+ <br/>
+ <p>
+  给大家看一个程序：
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/43-0.png" style="width: 100%; height: auto;"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  你输入一个城市的名称，就会告诉你这个城市现在的天气情况。接下来的几节课，我就说一下怎么实现这样一个小程序。
+ </p>
+ <p>
+ </p>
+ <p>
+  之所以能知道一个城市的天气，是因为用了这样一个天气查询接口：
+ </p>
+ <p>
+  http://wthrcdn.etouch.cn/weather_mini?city=北京
+ </p>
+ <p>
+  此接口可以返回 city 对应城市昨日天气及5天内的天气预报，包括气温、指数、空气质量、风力等。
+ </p>
+ <p>
+  试着在浏览器里访问一下该网址，你会自动下载一个 weather_mini 的文件，这个文件里面就是咱们想要的数据。文件用记事本就可以打开，打开后，里面看上去有点像python中字典类的文字是一种称作json格式的数据。（因为接口有时候会对结果进行 gzip 压缩，有时打开看到的内容会是乱码）
+ </p>
+ <p>
+ </p>
+ <p>
+  而我们的程序要做的事情，就是按照用户输入的城市名称，去这个接口请求对应的天气信息，再把结果展示给用户。
+ </p>
+ <p>
+ </p>
+ <p>
+  于是，在这个程序中，我们要用到一个新模块：
+ </p>
+ <p>
+  requests
+ </p>
+ <p>
+  用来发送网络请求，获取数据
+ </p>
+ <p>
+ </p>
+ <p>
+  听上去似乎还挺不算太复杂？这是因为 requests 库帮我们做了很多原本需要我们完成的事情，包括gzip压缩、字符编码、json的自动处理。如果用Python自带的urllib.request库，工作量就会增加很多。
+ </p>
+ <p>
+ </p>
+ <p>
+  今天先卖个关子，不说具体的写法。想挑战的同学可以试试在我说之前就把这个程序搞定。
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../43">
+     <span aria-hidden="true">
+      ←
+     </span>
+     42.函数的默认参数
+    </a>
+   </li>
+   <li class="next">
+    <a href="../45">
+     44.查天气（2）
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

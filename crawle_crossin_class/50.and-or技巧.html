@@ -1,0 +1,123 @@
+50<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第50课】and-or技巧
+ </h2>
+ <br/>
+ <p>
+  今天介绍一个python中的小技巧：and-or
+ </p>
+ <p>
+ </p>
+ <p>
+  看下面这段代码：
+ </p>
+ <pre class="language-python"><code>a = "heaven"
+b = "hell"
+c = True and a or b
+print (c)
+d = False and a or b
+print (d)</code></pre>
+ <p>
+ </p>
+ <p>
+  输出：
+ </p>
+ <p>
+  heaven
+ </p>
+ <p>
+  hell
+ </p>
+ <p>
+ </p>
+ <p>
+  结果很奇怪是不是？
+ </p>
+ <p>
+  表达式从左往右运算，1和"heaven"做and的结果是"heaven"，再与"hell"做or的结果是"heaven"；0和"heaven"做and的结果是0，再与"hell"做or的结果是"hell"。
+ </p>
+ <p>
+  抛开绕人的and和or的逻辑，你只需记住，在一个bool and a or b语句中，当bool条件为真时，结果是a；当bool条件为假时，结果是b。
+ </p>
+ <p>
+  有学过c/c++的同学应该会发现，这和bool?a:b表达式很像。
+ </p>
+ <p>
+ </p>
+ <p>
+  有了它，原本需要一个if-else语句表述的逻辑：
+ </p>
+ <pre class="language-python"><code>if a &gt; 0:
+    print ("big")
+else:
+    print ("small")</code></pre>
+ <p>
+ </p>
+ <p>
+  就可以直接写成：
+ </p>
+ <pre class="language-python"><code>print ((a &gt; 0) and "big" or "small")</code></pre>
+ <p>
+ </p>
+ <p>
+  然而不幸的是，如果直接这么用，有一天你会踩到坑的。和c语言中的?:表达式不同，这里的and or语句是利用了python中的逻辑运算实现的。当a本身是个假值（如0，""）时，结果就不会像你期望的那样。
+ </p>
+ <p>
+ </p>
+ <p>
+  比如：
+ </p>
+ <pre class="language-python"><code>a = ""
+b = "hell"
+c = True and a or b
+print (c)</code></pre>
+ <p>
+ </p>
+ <p>
+  得到的结果不是""而是"hell"。因为""和"hell"做or的结果是"hell"。
+ </p>
+ <p>
+ </p>
+ <p>
+  所以，and-or真正的技巧在于，确保a的值不会为假。最常用的方式是使 a 成为 [a] 、 b 成为 [b]，然后使用返回值列表的第一个元素：
+ </p>
+ <pre class="language-python"><code>a = ""
+b = "hell"
+c = (True and [a] or [b])[0]
+print (c)</code></pre>
+ <p>
+ </p>
+ <p>
+  由于[a]是一个非空列表，所以它决不会为假。即使a是0或者''或者其它假值，列表[a]也为真，因为它有一个元素。
+ </p>
+ <p>
+ </p>
+ <p>
+  在两个常量值进行选择时，and-or会让你的代码更简单。但如果你觉得这个技巧带来的副作用已经让你头大了，没关系，用if-else可以做相同的事情。不过在python的某些情况下，你可能没法使用if语句，比如lambda函数中，这时候你可能就需要and-or的帮助了。
+ </p>
+ <p>
+ </p>
+ <p>
+  什么是lambda函数？呵呵，这是python的高阶玩法，暂且按住不表，以后有机会再说。
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../51">
+     <span aria-hidden="true">
+      ←
+     </span>
+     49.面向对象（4）
+    </a>
+   </li>
+   <li class="next">
+    <a href="../53">
+     51.元组
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

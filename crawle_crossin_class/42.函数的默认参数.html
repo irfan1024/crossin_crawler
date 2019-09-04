@@ -1,0 +1,107 @@
+42<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第42课】函数的默认参数
+ </h2>
+ <br/>
+ <p>
+  今天分享一点小技巧。之前我们用过函数，比如：
+ </p>
+ <pre class="language-python"><code>def hello(name):
+   print ('hello ' + name)</code></pre>
+ <p>
+ </p>
+ <p>
+  然后我们去调用这个函数：
+ </p>
+ <pre class="language-python"><code>hello('world')</code></pre>
+ <p>
+ </p>
+ <p>
+  程序就会输出
+ </p>
+ <p>
+  hello world
+ </p>
+ <p>
+ </p>
+ <p>
+  如果很多时候，我们都是用world来调用这个函数，少数情况才会去改参数。那么，我们就可以给这个函数一个默认参数：
+ </p>
+ <pre class="language-python"><code>def hello(name = 'world'):
+   print ('hello ' + name)</code></pre>
+ <p>
+ </p>
+ <p>
+  当你没有提供参数值时，这个参数就会使用默认值；如果你提供了，就用你给的。
+ </p>
+ <p>
+ </p>
+ <p>
+  这样，在默认情况下，你只要调用
+ </p>
+ <pre class="language-python"><code>hello()</code></pre>
+ <p>
+ </p>
+ <p>
+  就可以输出
+ </p>
+ <p>
+  hello world
+ </p>
+ <p>
+ </p>
+ <p>
+  同样你也可以指定参数：
+ </p>
+ <pre class="language-python"><code>hello('python')</code></pre>
+ <p>
+ </p>
+ <p>
+  输出
+ </p>
+ <p>
+  hello python
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/42-0.png" style="width: 100%; height: auto;"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  注意，当函数有多个参数时，如果你想给部分参数提供默认参数，那么这些参数必须在参数的末尾。比如：
+ </p>
+ <p>
+ </p>
+ <pre class="language-python"><code>def func(a, b=5):</code></pre>
+ <p>
+  是正确的
+ </p>
+ <p>
+ </p>
+ <pre class="language-python"><code>def func(a=5, b):</code></pre>
+ <p>
+  就会出错
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../42">
+     <span aria-hidden="true">
+      ←
+     </span>
+     41.用文件保存游戏（3）
+    </a>
+   </li>
+   <li class="next">
+    <a href="../44">
+     43.查天气（1）
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

@@ -1,0 +1,182 @@
+5<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第5课】变量
+ </h2>
+ <br/>
+ <p>
+  昨天说到，需要让程序理解我们输入的东西。那首先，就需要有东西把我们输入的内容记录下来，好为接下来的操作做准备。
+ </p>
+ <p>
+  Python之神说，要有变量！于是就有了变量。
+ </p>
+ <p>
+ </p>
+ <p>
+  <strong>
+   变量
+  </strong>
+  ，望文生义，
+  <strong>
+   就是可变化的量
+  </strong>
+  。python里创建一个变量的方法很简单，给它起个名字，然后给它一个值。举起几个栗子:
+ </p>
+ <pre class="language-python"><code>name = 'Crossin'
+myVar = 123
+price = 5.99
+visible = True</code></pre>
+ <p>
+  “
+  <strong>
+   =
+  </strong>
+  ”的作用是把右边的值赋予给左边的变量。
+ </p>
+ <p>
+ </p>
+ <p>
+  这里说一下另外一个概念，叫做“数据类型”，上面4颗栗子分别代表了python中较常见的四种基本类型：
+ </p>
+ <ul>
+  <li>
+   字符串 ： 表示一串字符，需要用''单引号或""双引号包围起来
+  </li>
+  <li>
+   整数
+  </li>
+  <li>
+   浮点数 ： 就是小数
+  </li>
+  <li>
+   bool（布尔）： 这个比较特殊，是用来表示逻辑上的“真”和“假”（或者说“
+   <strong>
+    是
+   </strong>
+   ”和“
+   <strong>
+    非
+   </strong>
+   ”）的一种类型，它只有两个值，
+   <strong>
+    True
+   </strong>
+   和
+   <strong>
+    False
+   </strong>
+   。（注意：这里没有引号，有了引号就变成字符串了）
+  </li>
+ </ul>
+ <p>
+ </p>
+ <p>
+  再次用到我们熟悉的 print。这次，我们升级了，要用print输出一个“变量”：
+ </p>
+ <pre class="language-python"><code>name = 'Crossin'
+print(name)</code></pre>
+ <p>
+ </p>
+ <p>
+  看到结果了吗？没有输出“
+  <strong>
+   name
+  </strong>
+  ”，也没有报错，而是输出了“
+  <strong>
+   Crossin
+  </strong>
+  ”。
+ </p>
+ <p>
+  <strong>
+   注意：
+  </strong>
+  name不需要加引号，不然它也就成了一个字符串，而不是变量
+ </p>
+ <p>
+  现在想一想：为什么之前 print 一段文字，如果没加引号就会报错，而 print 一个数字就没有问题呢？
+ </p>
+ <p>
+ </p>
+ <p>
+  它叫变量，那就是能变的。所以在一次“赋值”操作之后，还可以继续给它赋予新的值，而且可以是不同类型的值。
+ </p>
+ <pre class="language-python"><code>a = 123
+print(a)
+a = 'hi'
+print(a)</code></pre>
+ <p>
+ </p>
+ <p>
+  “=”的右边还可以更复杂一点，比如是一个计算出的值:
+ </p>
+ <pre class="language-python"><code>value = 3 * 4
+print(value)
+value = 2 &lt; 5
+print(value)</code></pre>
+ <p>
+ </p>
+ <p>
+  甚至，也可以是input():
+ </p>
+ <pre class="language-python"><code>name = input()
+print(name)</code></pre>
+ <p>
+ </p>
+ <p>
+  于是，我们又可以进化一下我们的小游戏了。把上次写的内容稍微改一下，加上变量：
+ </p>
+ <pre class="language-python"><code>print("Who do you think I am?")
+you = input()
+print("Oh, yes! I am a")
+print(you)</code></pre>
+ <p>
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/5-0.png" style="width: 100%; height: auto;"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  看来程序已经知道我们的输入了。接下来，就要让它学会对不同的答案做出判断。这个我们留到下次再说。
+ </p>
+ <p>
+ </p>
+ <p>
+  #======== 课外的话 ========#
+ </p>
+ <p>
+  有些同学在用我们的
+  <strong>
+   在线编辑器
+  </strong>
+  或者其他类似的网页工具在写代码。但有个不幸的消息是：绝大多数在线编辑器没办法完全模拟控制台下输入输出的操作（不支持 input）。所以，你可以通过它来简单的体验和学习，但是想跟着我一起完成那个弱智小游戏，还是必须给你的电脑装上python。
+ </p>
+ <p>
+ </p>
+ <p>
+  今天是周五。我觉得吧，到周末了，大家应该远离一下电脑，多陪陪家人朋友，吃吃饭，出去走走。祝大家周末愉快！
+ </p>
+ <p>
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../5">
+     <span aria-hidden="true">
+      ←
+     </span>
+     4.输入
+    </a>
+   </li>
+   <li class="next">
+    <a href="../7">
+     6.bool
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

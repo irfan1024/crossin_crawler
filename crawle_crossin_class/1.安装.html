@@ -1,0 +1,363 @@
+1<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第1课】安装
+ </h2>
+ <br/>
+ <p>
+  在Windows系统上安装Python的方法还算简单，就比平常装个软件稍稍麻烦一点点。（Mac 也差不多）
+ </p>
+ <p>
+ </p>
+ <p>
+  1.下载
+ </p>
+ <p>
+  进入Python的官方下载页面
+  <a href="https://www.python.org/downloads/" rel="noopener" target="_blank">
+   https://www.python.org/downloads/
+  </a>
+  ，你会看到下载按钮和一堆下载链接。我们就直接选“
+  <strong>
+   Download Python 3.7.3
+  </strong>
+  ”（选最新的即可），如果没有自动下载，64位系统的同学可以选下面那个“Windows x86-64 executable installer”。如果你不是百分百确定自己是64位系统，请装非64位版本“Windows x86 executable installer”。
+ </p>
+ <p>
+  由于Python 3是今后的主流，不建议安装Python 2。不过想用 py2 版本也可以，请在公众号回复关键字
+  <span style="background-color: #ffff99;">
+   <strong>
+    2v3
+   </strong>
+  </span>
+  ，查看一篇关于2和3之间的一些变化注意事项。
+ </p>
+ <p>
+ </p>
+ <p>
+  2. 安装
+ </p>
+ <p>
+  下载之后，就和装其他软件一样，双击，一路Next，想换安装路径的同学可以换个位置。但不管换不换
+  <strong>
+   ，请把这个路径复制下来
+  </strong>
+  ，比如我的是“
+  <span style="color: #800000;">
+   <strong>
+    C:\python37\
+   </strong>
+  </span>
+  ”，后面要用到它。另外有个要注意的是，如果有“
+  <strong>
+   <span style="color: #800000;">
+    add python.exe to path
+   </span>
+  </strong>
+  ”这个选项，请选中它，会让你省不少事。（不同版本这里略有差异）
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/1-0.png" style="width: 100%; height: auto;"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  3. 运行
+ </p>
+ <p>
+  安装完之后，你应该可以在开始菜单的程序里找到 Python 的文件夹了。里面有一个叫做
+  <strong>
+   IDLE
+  </strong>
+  的程序，点击它，就进入了 Python 的开发工具。
+ </p>
+ <p>
+  <img alt="" height="469" src="https://cdn.py2china.cn/wechat/pystart/1-4.png" style="width: 100%; height: auto;" width="842"/>
+ </p>
+ <p>
+  能打开 IDLE，看到里面输出的版本提示信息，就完成 Python 的安装了。
+ </p>
+ <p>
+  接下来，你就可以写下那句程序员最爱的
+ </p>
+ <pre class="language-python" style="word-spacing: 0px;"><code>print('Hello World')</code></pre>
+ <p>
+  向Python的世界里发出第一声啼哭。注意：单引号、双引号都可以，但引号和括号都一定要用英文的标点！
+ </p>
+ <p>
+  <img alt="" height="378" src="https://cdn.py2china.cn/wechat/pystart/1-5.png" style="width: 100%; height: auto;" width="814"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  特别说明：有时候，虽然 python 正常安装完毕，但是打开 IDLE 的时候会报错，或者无法正常使用。这时候，首先把报错信息在网上搜索一下，通常都会找到解决方案。如果不行，可以考虑换个早一点的python版本，比如 3.5、3.4 之类的重新安装下（不影响学习）。仍然不行的话，可以考虑再多安装一个 pycharm 软件来写代码（详细说明可在公众号回复关键字
+  <span style="background-color: #ffff99;">
+   <strong>
+    pycharm
+   </strong>
+  </span>
+  ）。你也可以去我们的
+  <a href="http://bbs.crossincode.com" rel="noopener" target="_blank">
+   论坛
+  </a>
+  上寻求帮助。
+ </p>
+ <p>
+ </p>
+ <p>
+  4. 配置命令行
+  <span style="color: #ff0000;">
+   （可选）
+  </span>
+ </p>
+ <p>
+  说明：完成前3步，你就已经可以开始写 Python 了，所以如果接下来的这一步让你感到头大，可以暂时忽略，基本不影响初期的学习。而且如果你上一步按照我说的，选上了“
+  <strong>
+   add python.exe to path
+  </strong>
+  ”，此步骤就已自动完成。这一步的目的是设置
+  <strong>
+   环境变量
+  </strong>
+  ，它的目的是让你能够在系统的命令行里运行 Python，具体是什么意思我暂时先不说得太复杂，大家照着做就好。
+ </p>
+ <p>
+  右键单击
+  <strong>
+   我的电脑
+  </strong>
+  ，依次点击"
+  <strong>
+   属性
+  </strong>
+  "-&gt;"
+  <strong>
+   高级
+  </strong>
+  "-&gt;"
+  <strong>
+   环境变量
+  </strong>
+  "（或者直接通过开始菜单的搜索栏搜索“
+  <strong>
+   环境变量
+  </strong>
+  ”进入），在“
+  <strong>
+   系统变量
+  </strong>
+  ”表单中点击叫做
+  <strong>
+   <span style="color: #800000;">
+    Path
+   </span>
+  </strong>
+  的变量，然后编辑这个变量，把“
+  <span style="color: #800000;">
+   <strong>
+    ;C:\Python37\
+   </strong>
+  </span>
+  ”，也就是你刚才复制的安装路径，用
+  <strong>
+   英文分号
+  </strong>
+  和前面已有的内容隔开，加到它的结尾。然后点确定，点确定，再点确定。完成。
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/1-1.png" style="width: 100%; height: auto;"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  怎么知道你已经配置成功安装了呢？这时候你需要打开
+  <strong>
+   命令行
+  </strong>
+  ，或者叫命令提示符、控制台。方法是：点击
+  <strong>
+   开始菜单
+  </strong>
+  -&gt;
+  <strong>
+   程序
+  </strong>
+  -&gt;
+  <strong>
+   附件
+  </strong>
+  -&gt;
+  <strong>
+   命令提示符
+  </strong>
+  ；或者直接在桌面按快捷键“
+  <strong>
+   Win+r
+  </strong>
+  ”，Win键就是Ctrl和Alt旁边那个有windows图标的键，输入
+  <span style="color: #ff0000;">
+   <strong>
+    cmd
+   </strong>
+  </span>
+  ，回车。这时候你就看到可爱的黑底白字了。
+ </p>
+ <p>
+  在命令行里输入
+  <span style="color: #ff0000;">
+   <strong>
+    python
+   </strong>
+  </span>
+  ，回车。如果看到诸如：
+ </p>
+ <p>
+  Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD64)] on win32
+ </p>
+ <p>
+  的提示文字，恭喜你！
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/1-2.png" style="width: 100%; height: auto;"/>
+ </p>
+ <p>
+  否则，请重新检查你哪里的打开方式不对，或者直接给我留言。
+ </p>
+ <p>
+  <span style="color: #ff0000;">
+   <strong>
+    没出现上图效果请务必检查这几项注意：
+   </strong>
+  </span>
+ </p>
+ <ul>
+  <li>
+   注意1：一定是要用
+   <strong>
+    英文分号
+   </strong>
+   和前面已有的内容隔开，记得关闭你的中文输入法
+  </li>
+  <li>
+   注意2：
+   <span style="color: #ff0000;">
+    <strong>
+     win7系统
+    </strong>
+   </span>
+   是右键单击“计算机”，点击“属性”-&gt;“高级系统设置”-&gt;“环境变量”
+  </li>
+  <li>
+   注意3：如果不存在Path记录，就创建一条新的
+  </li>
+  <li>
+   注意4：
+   <span style="color: #ff0000;">
+    <strong>
+     win10系统
+    </strong>
+   </span>
+   的Path不是用分号分隔，而是需要点击Path后再点击
+   <strong>
+    新建
+   </strong>
+   一条记录，把路径加进去，
+   <span style="color: #ff0000;">
+    <strong>
+     无需分号
+    </strong>
+   </span>
+  </li>
+  <li>
+   注意5：环境变量里会有
+   <span style="color: #ff0000;">
+    <strong>
+     用户变量
+    </strong>
+   </span>
+   和
+   <span style="color: #ff0000;">
+    <strong>
+     系统变量
+    </strong>
+   </span>
+   两类，如果添加后无效，建议在两类的Path里都加上路径，并尝试
+   <span style="color: #ff0000;">
+    <strong>
+     重启
+    </strong>
+   </span>
+   下系统
+  </li>
+  <li>
+   注意6：设置完要
+   <strong>
+    重新打开命令行
+   </strong>
+  </li>
+ </ul>
+ <p>
+  命令行里的Python环境一样可以运行代码：
+ </p>
+ <p>
+  <img alt="" src="https://cdn.py2china.cn/wechat/pystart/1-3.png" style="width: 100%; height: auto;"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  嗯。。。如果这么几步你还是被绕晕了，没关系，我还留了一手：从公众号右边菜单里的“
+  <strong>
+   在线编程
+  </strong>
+  ”或回复关键字
+  <strong>
+   code
+  </strong>
+  ，可进入我为你开发的一个在线写python的网页工具，练习一下python语言。不过在线工具毕竟功能有限，仅可作为体验，真正要学习还得在电脑上。
+ </p>
+ <p>
+ </p>
+ <p>
+  那Mac的同学怎么办？Mac上叫“
+  <strong>
+   终端
+  </strong>
+  ”，英文版叫
+  <strong>
+   Terminal
+  </strong>
+  ，可以在“应用程序”里找到，也可以直接在你的Mac上搜索“终端”或者“Terminal”找到。打开之后输入
+  <strong>
+   idle
+  </strong>
+  ，敲下回车，就可以进入开发工具；如果输入
+  <strong>
+   python
+  </strong>
+  ，就可以打开如上的 python 命令行，你可以自己亲手试一试。
+ </p>
+ <p>
+ </p>
+ <p>
+  好了，今天就这么多，快去试试你的python，输出一行“Hello World”吧。完成的同学可以截个屏发给我。欢迎各种建议、讨论和闲聊，当然更欢迎你把这里分享给更多的朋友。
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../1">
+     <span aria-hidden="true">
+      ←
+     </span>
+     0.为什么选择 Python 入门？
+    </a>
+   </li>
+   <li class="next">
+    <a href="../3">
+     2.print
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>

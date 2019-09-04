@@ -1,0 +1,190 @@
+63<div class="ppx-main-block" style="padding-left: 10%;">
+ <h2>
+  【Python 第63课】python shell
+ </h2>
+ <br/>
+ <p>
+  各位好久不见，我终于又更新了:D。今天抽空来讲点非常非常基础的东西，关于在哪里写 python。
+ </p>
+ <p>
+ </p>
+ <p>
+  如果你已经编写过自己的程序，相信对这些内容已经熟悉。但很多刚刚接触编程的人，对于在 python 里编写并运行代码，还时常有些疑问。
+ </p>
+ <p>
+ </p>
+ <p>
+  一般来说，有两种运行 python 代码的方法：
+ </p>
+ <p>
+  1. 使用交互式的带提示符的解释器
+ </p>
+ <p>
+  2. 使用源文件
+ </p>
+ <p>
+ </p>
+ <p>
+  第一种方法，所谓“交互式的带提示符的解释器”，也被称做 python shell。当你安装好 python，并正确配置系统变量 PATH 后（linux 和 mac 上通常都预装并配置好了 python），在命令行里输入 python，会看到诸如以下的提示：
+ </p>
+ <p>
+ </p>
+ <p>
+  $ python
+ </p>
+ <p>
+  Python 3.6.7 (default, Oct 25 2018, 09:16:13)
+ </p>
+ <p>
+  [GCC 5.4.0 20160609] on linux
+ </p>
+ <p>
+  Type "help", "copyright", "credits" or "license" for more information.
+ </p>
+ <p>
+  &gt;&gt;&gt;
+ </p>
+ <p>
+ </p>
+ <p>
+  这就是 python shell。三个右括号 &gt;&gt;&gt; 是 python 输入的提示符，它表示 python 解释器已经准备好了，等待你的命令。
+ </p>
+ <p>
+  在这里输入 python 的命令，并输入回车，python 解释器将在下一行立刻给出运行的结果。
+ </p>
+ <p>
+ </p>
+ <p>
+  以最简单的 print 方法为例：
+ </p>
+ <pre class="language-python"><code>&gt;&gt;&gt; print ('hello world')
+hello world
+&gt;&gt;&gt;</code></pre>
+ <p>
+ </p>
+ <p>
+  当输入完并回车之后，python 会立刻在后面输出你指定的字符串。
+ </p>
+ <p>
+ </p>
+ <p>
+  python shell 可以非常方便的运行 python 语句，这一点对调试、快速组建和测试相当有用。当你在编写代码的过程中，对一些方法不确定的时候，可以通过 python shell 来进行试验。一(cheng)些(xu)人(yuan)甚至把 Python shell 当作计算器来使用：
+ </p>
+ <pre class="language-python"><code>&gt;&gt;&gt; 1 + 1
+2
+&gt;&gt;&gt; x = 1
+&gt;&gt;&gt; y = 2
+&gt;&gt;&gt; x + y
+3
+&gt;&gt;&gt;</code></pre>
+ <p>
+ </p>
+ <p>
+  注意上面的例子中，我们在 python shell 中定义了变量。这些变量值在 python shell 打开时一直有效，关闭后变量值则会丢失，除非你通过其他的方式进行保存。
+ </p>
+ <p>
+ </p>
+ <p>
+  但 python shell 不足的地方是，当你写多行代码时很不方便。你可以尝试写一个 if 语句：
+ </p>
+ <pre class="language-python"><code>&gt;&gt;&gt; if 2 &gt; 1:
+... print ('right')
+...
+right
+&gt;&gt;&gt;</code></pre>
+ <p>
+ </p>
+ <p>
+  你需要在第二行开头加上空格，并用两个回车结束语句。当你发现前面某行有错误时，想要回去修改就很麻烦。
+ </p>
+ <p>
+ </p>
+ <p>
+  另外，python shell 里写好的代码也很难保存（至少我目前还不知道有什么可行的方法）。所以一般并不会用它来“真正地”写代码。当你需要写一个相对完整的 python 程序时，你需要写在一个“源文件”中。这就是运行 python 的第二种方法。
+ </p>
+ <p>
+ </p>
+ <p>
+  仍然以 print 为例：
+ </p>
+ <p>
+ </p>
+ <p>
+  用一个文本编辑器新建一个文件，在里面输入：
+ </p>
+ <pre class="language-python"><code>print ("hello world")</code></pre>
+ <p>
+ </p>
+ <p>
+  保存这个文件为 hello.py。注意，有些同学可能会习惯命名为 print.py，请不要这么做。不要以任何 python 的内置方法或者你会使用到的模块名来命名你自己的代码文件。
+ </p>
+ <p>
+ </p>
+ <p>
+  然后在命令行中，进入到这个文件所在的文件夹，输入 python hello.py。你会看到：
+ </p>
+ <p>
+ </p>
+ <p>
+  $python hello.py
+ </p>
+ <p>
+  hello world
+ </p>
+ <p>
+  $
+ </p>
+ <p>
+ </p>
+ <p>
+  这时候不会进入 python shell，而是直接输出了程序的结果。换句话说，python 执行了我们写在源文件 hello.py 中的代码。
+ </p>
+ <p>
+ </p>
+ <p>
+  python 自带了一个叫做 IDLE 的编辑器。你可以在程序列表里找到并打开它，也可以通过命令行中输入 idle 打开。
+ </p>
+ <p>
+ </p>
+ <p>
+  打开后，你会看到一个默认的窗口，里面有我们前面说到的 &gt;&gt;&gt; 提示符。这就是 IDLE 里的 python shell，和我们前面说的命令行中的效果是一样的，可以用来调试简单的命令。在这里，你还可以通过快捷键 alt + p（mac 上是 ctrl + p）来返回之前输入过的命令。
+ </p>
+ <p>
+ </p>
+ <p>
+  如果要编辑源文件，则需要在菜单栏中选择 File -&gt; New Window。这时打开的新窗口就是源文件窗口。在里面写好你的 python 代码后，点击菜单栏上的 Run -&gt; Run Module（或者按键盘上的F5），按提示保存后，就会运行这个源文件，输出结果将会在之前的 python shell 窗口中显示。对于初学者来说，这还是比较方便的开发方式。
+ </p>
+ <p>
+ </p>
+ <p>
+  当然，还有很多 python 的 IDE（集成开发环境）可供选择，在此我不一一介绍。但基本都包括 python shell 和源代码编辑这两块核心功能。选择合适的方式去写 python，会让你事半功倍。
+ </p>
+ <p>
+ </p>
+ <p>
+  ------------------
+ </p>
+ <p>
+  最后说点题外话：最近工作上的事情比较忙，一心难以二用，因此耽搁了很久也没有更新文章。目前这种状况仍然没有改变，所以还是不能保证更新的频率，望诸位理解。好在 python 的入门知识已基本都讲到了，点击文章末尾的“阅读原文”可进入之前的文章目录。接下来，我会挑一些小技巧或者常见问题进行分享。同时，我依然会在微信、论坛和QQ群里出现，尽量回答大家的问题，欢迎来各种讨论。
+ </p>
+ <nav aria-label="...">
+  <ul class="pager">
+   <li class="previous">
+    <a href="../64">
+     <span aria-hidden="true">
+      ←
+     </span>
+     62.python 2 到 3 的新手坑
+    </a>
+   </li>
+   <li class="next">
+    <a href="../66">
+     64.列表解析
+     <span aria-hidden="true">
+      →
+     </span>
+    </a>
+   </li>
+  </ul>
+ </nav>
+</div>
