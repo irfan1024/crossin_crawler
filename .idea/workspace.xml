@@ -2,82 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e6d5563-e490-4eba-84d6-741086ff0354" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/crawle_class/crawler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crawle_class/crossin_crawler.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crossin_base_class/base_class.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fiddler_phone/fiddler1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/game.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/0.为什么选择 Python 入门？.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/1.安装.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/10.变量2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/11.逻辑判断.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/12.for循环.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/13.字符串.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/14.字符串格式化.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/15.循环的嵌套.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/16.字符串格式化2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/17.类型转换.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/18.bool类型转换.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/19.函数.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/2.print.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/20.命令行常用命令.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/21.函数的参数.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/22.函数应用示例.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/23.if, elif, else.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/24.if的嵌套.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/25.初探list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/26.操作list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/27.list切片.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/28.字符串的分割.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/29.连接list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/3.IDE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/30.字符串的索引和切片.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/31.读文件.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/32.写文件.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/33.处理文件中的数据.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/34.break.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/35.continue.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/36.异常处理.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/37.字典.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/38.模块.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/39.用文件保存游戏（1）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/4.输入.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/40.用文件保存游戏（2）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/41.用文件保存游戏（3）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/42.函数的默认参数.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/43.查天气（1）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/44.查天气（2）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/45.查天气（3）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/46.面向对象（1）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/47.面向对象（2）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/48.面向对象（3）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/49.面向对象（4）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/5.变量.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/50.and-or技巧.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/51.元组.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/52.数学运算.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/53.真值表.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/54.正则表达式（1）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/55.正则表达式（2）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/56.正则表达式（3）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/57.正则表达式（4）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/58.正则表达式（5）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/59.随机数.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/6.bool.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/60.计时.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/61.调试程序.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/62.python 2 到 3 的新手坑.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/63.python shell.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/64.列表解析.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/65.函数的参数传递（1）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/66.函数的参数传递（2）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/67.函数的参数传递（3）.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/68.lambda 表达式.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/69.变量的作用域.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/7.if.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/70.map 函数.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/71.reduce 函数.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/72.多线程.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/8.while.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/9.random.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/Python 入门教程.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawle_crossin_class/crossin_pdf.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawle_crossin_class/crossin_pdf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhihu/zhihu.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +35,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/crawle_crossin_class/crossin_pdf.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/fiddler_phone/fiddler1.py" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RunDashboard">
@@ -118,7 +50,51 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.pdfrun">
+  <component name="RunManager" selected="Python.new_c_run">
+    <configuration name="crawlerrun" type="PythonConfigurationType" factoryName="Python">
+      <module name="crossin_crawler" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="E:\anaconda\setup\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crawle_class" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawle_class/crawler.py" />
+      <option name="PARAMETERS" value="run" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fiddler_run" type="PythonConfigurationType" factoryName="Python">
+      <module name="crossin_crawler" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="E:\anaconda\setup\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fiddler_phone" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fiddler_phone/fiddler1.py" />
+      <option name="PARAMETERS" value="run" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="lianjiarun" type="PythonConfigurationType" factoryName="Python">
       <module name="crossin_crawler" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -344,6 +320,8 @@
       <item itemvalue="Python.movie" />
       <item itemvalue="Python.wordcloudrun" />
       <item itemvalue="Python.new_c_run" />
+      <item itemvalue="Python.fiddler_run" />
+      <item itemvalue="Python.crawlerrun" />
       <item itemvalue="Python.pdfrun" />
       <item itemvalue="Python.sinarun" />
       <item itemvalue="Python.zhihurun" />
@@ -384,7 +362,11 @@
       <workItem from="1567514900981" duration="13447000" />
       <workItem from="1567555021848" duration="2172000" />
       <workItem from="1567576556057" duration="6218000" />
-      <workItem from="1567583314478" duration="4725000" />
+      <workItem from="1567583314478" duration="8313000" />
+      <workItem from="1567608505259" duration="301000" />
+      <workItem from="1567653640288" duration="6389000" />
+      <workItem from="1567835690387" duration="1124000" />
+      <workItem from="1567901600295" duration="8144000" />
     </task>
     <servers />
   </component>
@@ -419,7 +401,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/crossin_crawler$pdfrun.coverage" NAME="pdfrun Coverage Results" MODIFIED="1567588635915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawle_crossin_class" />
+    <SUITE FILE_PATH="coverage/crossin_crawler$pdfrun.coverage" NAME="pdfrun Coverage Results" MODIFIED="1567591054059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawle_crossin_class" />
     <SUITE FILE_PATH="coverage/crossin_crawler$zhihurun.coverage" NAME="zhihurun Coverage Results" MODIFIED="1567085663948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/crossin_crawler$weather1.coverage" NAME="weather1 Coverage Results" MODIFIED="1566640651317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/crossin_crawler$zhaopinrun.coverage" NAME="zhaopinrun Coverage Results" MODIFIED="1567089803871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -427,7 +409,9 @@
     <SUITE FILE_PATH="coverage/crossin_crawler$movie.coverage" NAME="movie Coverage Results" MODIFIED="1567252652986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/crossin_crawler$lianjiarun.coverage" NAME="lianjiarun Coverage Results" MODIFIED="1566908839517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/crossin_crawler$wordcloudrun.coverage" NAME="wordcloudrun Coverage Results" MODIFIED="1567252902063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/crossin_crawler$fiddler_run.coverage" NAME="fiddler_run Coverage Results" MODIFIED="1567836237206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fiddler_phone" />
     <SUITE FILE_PATH="coverage/crossin_crawler$pyechartsrun.coverage" NAME="pyechartsrun Coverage Results" MODIFIED="1567248474264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/crossin_crawler$new_c_run.coverage" NAME="new_c_run Coverage Results" MODIFIED="1567555113105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/crossin_crawler$new_c_run.coverage" NAME="new_c_run Coverage Results" MODIFIED="1567912229284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/crossin_crawler$crawlerrun.coverage" NAME="crawlerrun Coverage Results" MODIFIED="1567655460033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawle_class" />
   </component>
 </project>
